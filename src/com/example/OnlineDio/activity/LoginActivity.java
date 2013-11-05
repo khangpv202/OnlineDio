@@ -6,7 +6,6 @@ import android.accounts.AccountManager;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Editable;
@@ -17,8 +16,6 @@ import android.widget.*;
 import com.example.OnlineDio.R;
 import com.example.OnlineDio.accounts.AccountGeneral;
 import com.example.OnlineDio.accounts.User;
-import com.example.OnlineDio.model.UserProfile;
-import com.example.OnlineDio.provider.OnlineDioContract;
 import com.example.OnlineDio.util.EmailValidator;
 import com.example.OnlineDio.util.StreamUtils;
 
@@ -44,6 +41,8 @@ public class LoginActivity extends AccountAuthenticatorActivity
     public final static String ARG_ACCOUNT_NAME = "ACCOUNT_NAME";
     public final static String ARG_IS_ADDING_NEW_ACCOUNT = "IS_ADDING_ACCOUNT";
     private AccountManager mAccountManager;
+
+    public static String userID = null;
 
 
     public static final String KEY_ERROR_MESSAGE = "ERR_MSG";
@@ -270,23 +269,26 @@ public class LoginActivity extends AccountAuthenticatorActivity
 
                 Bundle data = new Bundle();
                 try
-                {
+                {    //todo: when enter account wrong, what happen
                     User user = AccountGeneral.sServerAuthenticate.userSignIn(userName, StreamUtils.convertToMd5(userPass), mAuthTokenType);
-                    UserProfile.Profile account = new UserProfile.Profile(user.getUser_id(),null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null);
+                    if (user != null)
+                    {
+                        userID = user.getUser_id();
+                        data.putString(AccountManager.KEY_ACCOUNT_NAME, userName);
+                        data.putString(AccountManager.KEY_ACCOUNT_TYPE, accountType);
+                        data.putString(AccountManager.KEY_AUTHTOKEN, user.getAccess_token());
+                        // We keep the user's object id as an extra data on the account.
+                        // It's used later for determine ACL for the data we send to the Parse.com service
+                        Bundle userData = new Bundle();
+                        userData.putString(AccountGeneral.USERDATA_USER_OBJ_ID, user.getUser_id());
+                        data.putBundle(AccountManager.KEY_USERDATA, userData);
+
+                        data.putString(PARAM_USER_PASS, userPass);
+                    }
+                    /*UserProfile.Profile account = new UserProfile.Profile(user.getUser_id(),null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null);
                     getContentResolver().insert(OnlineDioContract.Profile.CONTENT_URI,account.getContentValues());
-                    Cursor c = getContentResolver().query(OnlineDioContract.Profile.CONTENT_URI,null,null,null,null);
-                    data.putString(AccountManager.KEY_ACCOUNT_NAME, userName);
-                    data.putString(AccountManager.KEY_ACCOUNT_TYPE, accountType);
+                    Cursor c = getContentResolver().query(OnlineDioContract.Profile.CONTENT_URI,null,null,null,null);*/
 
-                    data.putString(AccountManager.KEY_AUTHTOKEN, user.getAccess_token());
-
-                    // We keep the user's object id as an extra data on the account.
-                    // It's used later for determine ACL for the data we send to the Parse.com service
-                    Bundle userData = new Bundle();
-                    userData.putString(AccountGeneral.USERDATA_USER_OBJ_ID, user.getUser_id());
-                    data.putBundle(AccountManager.KEY_USERDATA, userData);
-
-                    data.putString(PARAM_USER_PASS, userPass);
 
                 }
                 catch (Exception e)
@@ -345,19 +347,10 @@ public class LoginActivity extends AccountAuthenticatorActivity
 
         setAccountAuthenticatorResult(intent.getExtras());
         setResult(RESULT_OK, intent);
-       /* try
+        if (!intent.getStringExtra(AccountManager.KEY_AUTHTOKEN).toString().isEmpty())
         {
-            sServerAuthenticate.userFeedContent(intent.getStringExtra(AccountManager.KEY_AUTHTOKEN.toString()));
+            Toast.makeText(getApplicationContext(), intent.getStringExtra(AccountManager.KEY_AUTHTOKEN).toString(), Toast.LENGTH_SHORT).show();
         }
-        catch (MalformedURLException e)
-        {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
-        catch (URISyntaxException e)
-        {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }*/
-        Toast.makeText(getApplicationContext(), intent.getStringExtra(AccountManager.KEY_AUTHTOKEN).toString(), Toast.LENGTH_SHORT).show();
         finish();
     }
 

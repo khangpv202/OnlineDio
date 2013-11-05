@@ -1,5 +1,8 @@
 package com.example.OnlineDio.fragment;
 
+import android.accounts.Account;
+import android.accounts.AccountManager;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -39,12 +42,30 @@ public class HomeFragment extends Fragment
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+    public void onCreate(Bundle savedInstanceState)
     {
-        View view = inflater.inflate(R.layout.home, container, false);
-        lisView = (ListView) view.findViewById(R.id.lvListSongs);
+        super.onCreate(savedInstanceState);
         homeCursor = getActivity().managedQuery(OnlineDioContract.Home.CONTENT_URI, null,
                 null, null, null);
+
+        if (homeCursor.getCount() == 0)
+        {
+            AccountManager accountManager = AccountManager.get(getActivity().getApplicationContext());
+            Account account = accountManager.getAccountsByType(OnlineDioContract.ACCOUNT_TYPE)[0];
+            Bundle bundle = new Bundle();
+            bundle.putBoolean(ContentResolver.SYNC_EXTRAS_MANUAL, true); // Performing a sync no matter if it's off
+            bundle.putBoolean(ContentResolver.SYNC_EXTRAS_EXPEDITED, true);
+            ContentResolver.requestSync(account, OnlineDioContract.AUTHORITY, bundle);
+        }
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+    {
+
+        View view = inflater.inflate(R.layout.home, container, false);
+        lisView = (ListView) view.findViewById(R.id.lvListSongs);
+
         mAdapter = new SimpleCursorAdapter(getActivity(), R.layout.home_row_of_listview2,
                 homeCursor, new String[]{OnlineDioContract.Home.Comments,
                 OnlineDioContract.Home.Likes,
@@ -53,7 +74,12 @@ public class HomeFragment extends Fragment
                 OnlineDioContract.Home.Avatar}, new int[]{R.id.tvNumberOfComment, R.id.tvNumberOfLiked,
                 R.id.tvNameOfDirector, R.id.tvTitleOfSong,
                 R.id.ivAvatars});
-//        getDataFromDB();
+        AccountManager accountManager = AccountManager.get(getActivity().getApplicationContext());
+        Account account = accountManager.getAccountsByType(OnlineDioContract.ACCOUNT_TYPE)[0];
+        /*if (!ContentResolver.isSyncActive(account, OnlineDioContract.AUTHORITY) && !ContentResolver.isSyncPending(account, OnlineDioContract.AUTHORITY))
+        {
+            refreshDataOfListView();
+        }*/
         SimpleCursorAdapter.ViewBinder savb =
                 new SimpleCursorAdapter.ViewBinder()
                 {
@@ -110,7 +136,7 @@ public class HomeFragment extends Fragment
             @Override
             public void onItemClick(AdapterView<?> parent, View view, final int pos, long id)
             {
-                Toast.makeText(getActivity(),pos+ " "+ id,Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), pos + " " + id, Toast.LENGTH_SHORT).show();
                 FragmentTransaction tx = getActivity().getSupportFragmentManager().beginTransaction();
                 tx.replace(R.id.navigation_main_FrameLayout, new ContentFragment());
                 tx.addToBackStack(null);
@@ -132,7 +158,15 @@ public class HomeFragment extends Fragment
 
     private void setThumbResource(View view, Cursor cursor)
     {
-        new DownloadImageTask((ImageView) view.findViewById(R.id.ivAvatars)).execute(cursor.getString(3));
+        new DownloadImageTask((ImageView) view.findViewById(R.id.ivAvatars)).execute(cursor.getString(15));
+    }
+
+    private void refreshDataOfListView()
+    {
+
+        homeCursor = getActivity().managedQuery(OnlineDioContract.Home.CONTENT_URI, null,
+                null, null, null);
+        mAdapter.changeCursor(homeCursor);
     }
 
 }

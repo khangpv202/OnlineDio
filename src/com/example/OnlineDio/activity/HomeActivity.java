@@ -93,10 +93,6 @@ public class HomeActivity extends Activity
         lisView.setAdapter(mAdapter);
         ImageButton home_ibOption = (ImageButton) findViewById(R.id.ibOption);
 
-        //AC mAccountManager.getAccountsByType();
-//        mAccountManager.
-
-        //ContentResolver.requestSync();
         home_ibOption.setOnClickListener(new View.OnClickListener()
         {
             @Override

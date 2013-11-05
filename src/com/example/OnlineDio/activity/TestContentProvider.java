@@ -60,7 +60,7 @@ public class TestContentProvider extends Activity
                 OnlineDioContract.Home.Avatar}, new int[]{R.id.tvNumberOfComment, R.id.tvNumberOfLiked,
                 R.id.tvNameOfDirector, R.id.tvTitleOfSong,
                 R.id.ivAvatars});
-//        getDataFromDB();
+//        refreshDataOfListView();
         SimpleCursorAdapter.ViewBinder savb =
                 new SimpleCursorAdapter.ViewBinder()
                 {
@@ -99,7 +99,6 @@ public class TestContentProvider extends Activity
                                 title.setText(cursor.getString(2));
                                 break;
                         }
-
                         return true;
                     }
                 };
@@ -138,7 +137,7 @@ public class TestContentProvider extends Activity
                 content.put(OnlineDioContract.Home.UserID, 10);
                 content.put(OnlineDioContract.Home.DisplayName, "nothing");
                 getContentResolver().insert(OnlineDioContract.Home.CONTENT_URI, content);
-                getDataFromDB();
+                refreshDataOfListView();
             }
         });
 
@@ -217,7 +216,7 @@ public class TestContentProvider extends Activity
                 Log.i("Account getted", au + "");
                 checkSync = true;
                 refreshAuthenTokenAndSync();
-                getDataFromDB();
+                refreshDataOfListView();
                 checkSync = false;
             }
         });
@@ -242,8 +241,8 @@ public class TestContentProvider extends Activity
             @Override
             public void onClick(View v)
             {
-                Account[] accounts = mAccountManager.getAccountsByType(OnlineDioContract.ACCOUNT_TYPE);
-                String au = mAccountManager.peekAuthToken(accounts[0], AccountGeneral.AUTHTOKEN_TYPE_FULL_ACCESS);
+                /*Account[] accounts = mAccountManager.getAccountsByType(OnlineDioContract.ACCOUNT_TYPE);
+                String au = mAccountManager.peekAuthToken(accounts[0], AccountGeneral.AUTHTOKEN_TYPE_FULL_ACCESS);*/
                 String userID = "586";
                 refreshAuthenTokenAndLoadProfile(userID);
 //                au = mAccountManager.peekAuthToken(accounts[0], AccountGeneral.AUTHTOKEN_TYPE_FULL_ACCESS);
@@ -251,7 +250,7 @@ public class TestContentProvider extends Activity
         });
     }
 
-    private void getDataFromDB()
+    private void refreshDataOfListView()
     {
 
         homeCursor = managedQuery(OnlineDioContract.Home.CONTENT_URI, null,

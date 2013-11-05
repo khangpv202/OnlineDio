@@ -85,7 +85,9 @@ public class OnlineDioContentProvider extends RESTfulContentProvider
             {
                 SQLiteQueryBuilder builder = new SQLiteQueryBuilder();
                 builder.setTables(OnlineDioContract.Home.TABLE_NAME);
-                return builder.query(db, projection, selection, selectionArgs, null, null, sortOrder);
+                Cursor c = builder.query(db, projection, selection, selectionArgs, null, null, sortOrder);
+                c.setNotificationUri(getContext().getContentResolver(),uri);
+                return c;
             }
             case CONTENT_FEEDS:
             {
@@ -93,13 +95,21 @@ public class OnlineDioContentProvider extends RESTfulContentProvider
                 SQLiteQueryBuilder builder1 = new SQLiteQueryBuilder();
                 builder1.setTables(OnlineDioContract.Home.TABLE_NAME);
                 builder1.appendWhere(OnlineDioContract.Home._ID + "=" + id);
-                return builder1.query(db, projection, selection, selectionArgs, null, null, sortOrder);
+                Cursor c = builder1.query(db, projection, selection, selectionArgs, null, null, sortOrder);
+                c.setNotificationUri(getContext().getContentResolver(),uri);
             }
             case PROFILE_INFOR:
             {
-
-                asyncQueryRequest(selection, QUERY_URI);
-//                return db.query(OnlineDioContract.Profile.TABLE_NAME,projection,null,null,null,null,null);
+                Cursor c = db.query(OnlineDioContract.Profile.TABLE_NAME, projection, null, null, null, null, null);
+                if (c.getCount() == 0)
+                {
+                    asyncQueryRequest(selection, QUERY_URI);
+                }
+                else
+                {
+                    c.setNotificationUri(getContext().getContentResolver(),uri);
+                    return c;
+                }
             }
 
             default:
@@ -196,7 +206,8 @@ public class OnlineDioContentProvider extends RESTfulContentProvider
         int uriType = sUriMatcher.match(uri);
         SQLiteDatabase sqlDB = mDatabaseHelper.getWritableDatabase();
         int rowsUpdated = 0;
-        switch (uriType) {
+        switch (uriType)
+        {
             case PROFILE_INFORS:
                 rowsUpdated = sqlDB.update(OnlineDioContract.Profile.TABLE_NAME,
                         values,
@@ -205,15 +216,18 @@ public class OnlineDioContentProvider extends RESTfulContentProvider
                 break;
             case PROFILE_INFOR:
                 String id = uri.getLastPathSegment();
-                if (TextUtils.isEmpty(selection)) {
+                if (TextUtils.isEmpty(selection))
+                {
                     rowsUpdated = sqlDB.update(OnlineDioContract.Profile.TABLE_NAME,
                             values,
                             OnlineDioContract.Profile._ID + "=" + id,
                             null);
-                } else {
+                }
+                else
+                {
                     rowsUpdated = sqlDB.update(OnlineDioContract.Profile.TABLE_NAME,
                             values,
-                            OnlineDioContract.Profile._ID+ "=" + id
+                            OnlineDioContract.Profile._ID + "=" + id
                                     + " and "
                                     + selection,
                             selectionArgs);

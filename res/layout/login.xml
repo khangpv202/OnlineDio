@@ -19,7 +19,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/login_btDone"
-                android:enabled="false"
                 android:layout_centerVertical="true"
                 android:layout_alignParentRight="true" android:layout_alignTop="@+id/login_btBack"
                 android:background="@drawable/soundboard_btn_done_selected" android:layout_marginRight="6dp"
