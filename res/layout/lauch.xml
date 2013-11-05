@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:background="@drawable/lauch_background">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:layout_gravity="center" android:layout_weight="2.3">
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/lauch_tvSologan1" android:layout_gravity="center" android:layout_weight="1.2"
+                android:gravity="center_horizontal|bottom" android:textColor="#a46e00"
+                android:textSize="14sp" android:text="@string/sologan_1"/>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/lauch_tvsologan2" android:layout_weight="1"
+                android:textColor="#774f00"
+                android:textSize="18sp" android:text="@string/sologan_2" android:textStyle="bold"
+                android:layout_gravity="center" android:gravity="center_horizontal"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:layout_weight="1.2" android:layout_marginBottom="5dp">
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ivAvatars" android:layout_gravity="center" android:background="@drawable/lauch_logo"
+                android:layout_marginTop="15dp" android:layout_marginBottom="5dp"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:layout_weight="2">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" android:layout_gravity="center" android:layout_weight="1.1"
+                >
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/lauch_btloginFB" android:background="@drawable/lauch_customer_loginfb"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp" android:layout_weight="1"/>
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/lauch_btloginNormal" android:background="@drawable/lauch_custom_buttonloginnormal"
+                    android:layout_gravity="center" android:layout_marginLeft="5dp" android:layout_weight="1"/>
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/lauch_btSign" android:layout_gravity="center"
+                    android:background="@drawable/lauch_custom_buttonsign" android:layout_marginRight="10dp"
+                    android:layout_weight="1" android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:layout_weight="0.9">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/lauch_tvintro"
+                    android:id="@+id/lauch_tvintro" android:layout_gravity="center"
+                    android:gravity="center_horizontal" android:textColor="#855b00" android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp" android:layout_marginLeft="3dp" android:layout_marginRight="3dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

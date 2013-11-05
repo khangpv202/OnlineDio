@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:background="#f6f6f6">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" android:background="@drawable/navbar_1"
+            android:id="@+id/relativeLayout" android:focusable="false" android:minHeight="35dp">
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:id="@+id/ibOption"
+                android:paddingLeft="@dimen/home_paddingLeft_ibOption"
+                android:layout_marginLeft="@dimen/home_marginLeft_ibOption" android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp" android:background="@drawable/home_custom_btoption"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:id="@+id/ibDone"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/home_ib_notification"
+                android:layout_marginTop="8dp" android:layout_marginBottom="8dp"
+                android:layout_marginRight="@dimen/home_marginLeft_ibOption"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home"
+                android:textSize="@dimen/home_textSize_tvHome"
+                android:textStyle="bold"
+                android:textColor="@color/White"
+                android:layout_centerInParent="true"
+                />
+    </RelativeLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:id="@+id/ivContentFeed"
+            android:layout_alignLeft="@+id/relativeLayout"
+            android:layout_below="@+id/relativeLayout"
+            android:background="#000000">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contents Feed"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="1dp" android:layout_marginBottom="1dp" android:layout_marginLeft="5dp">
+        </TextView>
+
+    </LinearLayout>
+    <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/lvListSongs"
+            android:layout_alignLeft="@+id/relativeLayout"
+            android:background="@color/Gray"
+            android:divider="#d1d1d1"
+            android:dividerHeight="@dimen/home_dividerHight_lvListSong"
+            android:layout_below="@+id/ivContentFeed"/>
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_bt_recorder2"
+            android:id="@+id/home_imgbtRecord"
+            android:layout_centerHorizontal="true"
+            android:layout_alignBottom="@+id/lvListSongs"/>
+</RelativeLayout>

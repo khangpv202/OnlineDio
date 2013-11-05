@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="#f6f6f6">
+    <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:id="@+id/list_comment_avata"
+            android:layout_centerVertical="true"
+            android:paddingBottom="3dp" android:paddingTop="3dp"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/list_comment_time" android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" android:layout_marginRight="5dp" android:textSize="9sp"/>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/list_comment_avata"
+            android:layout_centerVertical="true" android:layout_marginLeft="5dp">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/list_comment_name" android:textSize="12sp" android:textColor="#333333"
+                android:textStyle="bold"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/list_comment_comment" android:textSize="9sp"/>
+    </LinearLayout>
+</RelativeLayout>

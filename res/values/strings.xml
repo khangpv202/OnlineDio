@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OnlineDio</string>
+    <string name="login_edtEmail">Email</string>
+    <string name="login_edtPass">Password</string>
+    <string name="login_tvForgotPass">
+        <u>I forgot my password</u>
+    </string>
+    <string name="login_edtEmailHint">Email</string>
+    <string name="login_edtPasswordHint">Password</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string name="image_base_url">
+        https://raw.github.com/android/platform_frameworks_base/master/core/res/res/drawable-%1$s/%2$s.png
+    </string>
+    <string name="action_add">Add</string>
+    <string name="sologan_1">ONE PICTURE SAYS A THOUSAND WORD</string>
+    <string name="sologan_2">WHAT IF ONE CLIP CAN SAY YOU</string>
+    <string name="lauch_tvintro">By joining OnlineDio you agree to the
+        <b>Tearms of Service</b>
+        and
+        <b>Privacy Policy</b>
+    </string>
+    <string name="content_tvTime">I month ago</string>
+    <string name="content_tvSound">Sound of Silence</string>
+    <string name="content_tvName">Mr. Bean Mini</string>
+    <string name="navigation_tvMyStation">My Station</string>
+    <string name="navigation_tvNameStation">Mr.Bean Aloha</string>
+    <string name="login_tvLogin">Login</string>
+    <string name="navigation_tvHome">Home</string>
+    <string name="content_tvContent">Content</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="titleOfSong">Sound Of Silence</string>
+    <string name="nameOfDirector">Mr. Bean</string>
+    <string name="numberLike">Like: 100</string>
+    <string name="numberComment">Comment: 9</string>
+    <string name="numberTimePost">s days ago</string>
+    <string name="home">Home</string>
+    <string name="content_rbThumbnail">Thumbnail</string>
+    <string name="content_rbDetail">Detail</string>
+    <string name="content_rbCommnet">Comment</string>
+    <string name="profile">Profile</string>
+    <string name="tvDisplayName">Display Name</string>
+    <string name="etDisplayname">Your display name</string>
+    <string name="tvWarning">People can follow you as an audience using display name.Please node that display cannot be
+        change later.
+    </string>
+    <string name="tvAccountInfor">Account Information</string>
+    <string name="tvFullName">Full Name</string>
+    <string name="etFullName">Your full name</string>
+    <string name="tvPhone">Phone No.</string>
+    <string name="exPhone">Your phone no.</string>
+    <string name="tvBirthday">Birthday</string>
+    <string name="etBirthday">Your birthday</string>
+    <string name="tvGender">Gender</string>
+    <string name="tvCountry">Country</string>
+    <string name="etCountry">Your country</string>
+    <string name="tvDescription">Description</string>
+    <string name="provider_name">New Online Dio</string>
+</resources>

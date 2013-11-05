@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f6f6f6"
+            android:minHeight="40dp">
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:id="@+id/navigation_imgIcon"
+                android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp"
+                />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/navigation_tvHome"
+                android:id="@+id/navigation_tvMenu"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/navigation_imgIcon" android:layout_centerVertical="true"
+                android:textStyle="bold" android:textColor="#333333"
+                android:gravity="center_vertical|center_horizontal"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/navigation_imgArow" android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_alignBottom="@+id/navigation_imgIcon"
+                android:src="@drawable/navigation_nextimage"
+                android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:layout_marginTop="5dp"
+                android:paddingTop="5dp"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/navigation_imgSuport"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/navigation_imgArow"
+                android:layout_marginRight="10dp" android:layout_marginBottom="5dp" android:layout_marginTop="5dp">
+        </ImageView>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="nav_names">
+        <item>ArrayAdapter&lt;String&gt;</item>
+        <item>SimpleAdapter</item>
+        <item>ArrayAdapter&lt;Object&gt;</item>
+        <item>ImageAdapter</item>
+        <item>CursorAdapter</item>
+        <item>PagerAdapter</item>
+    </string-array>
+
+
+    <string-array name="nav_classes">
+        <item>com.stylingandroid.adapters.ArrayAdapterStringFragment</item>
+        <item>com.stylingandroid.adapters.SimpleAdapterFragment</item>
+        <item>com.stylingandroid.adapters.ArrayAdapterObjectFragment</item>
+        <item>com.stylingandroid.adapters.ArrayAdapterImageFragment</item>
+        <item>com.stylingandroid.adapters.CursorAdapterFragment</item>
+        <item>com.stylingandroid.adapters.ViewPagerFragment</item>
+    </string-array>
+    <string-array name="listCountry">
+        <item>Viet Nam</item>
+        <item>India</item>
+        <item>China</item>
+        <item>Japan</item>
+        <item>Iran</item>
+        <item>Philippines</item>
+        <item>Turkey</item>
+        <item>ThaiLand</item>
+        <item>Malaysia</item>
+        <item>Uzbekistan</item>
+        <item>Saudi Arabia</item>
+        <item>Afghanistan</item>
+        <item>Kazakhstan</item>
+        <item>Singapore</item>
+        <item>Lebanon</item>
+        <item>Mongolia</item>
+        <item>Bahrain</item>
+    </string-array>
+</resources>

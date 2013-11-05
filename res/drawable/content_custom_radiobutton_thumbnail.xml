@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/content_buttontab" android:state_first="true"/>
+    <item android:drawable="@drawable/content_buttonpress" android:state_checked="true"/>
+    <item android:drawable="@drawable/content_buttonpress" android:state_pressed="true"/>
+    <item android:drawable="@drawable/content_buttontab" android:state_checked="false"/>
+</selector>

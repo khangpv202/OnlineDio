@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:background="#eeeeee">
+
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="deleteOne"
+                android:id="@+id/delete"
+                android:layout_toRightOf="@+id/addNew" android:layout_alignTop="@+id/addNew"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add_New"
+                android:id="@+id/addNew" android:layout_gravity="center"
+                android:layout_alignParentLeft="true" android:layout_alignParentTop="true"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="query"
+                android:id="@+id/query"
+                android:layout_toRightOf="@+id/delete" android:layout_alignTop="@+id/delete"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GetToken"
+                android:id="@+id/getToken"
+                android:layout_toRightOf="@+id/query" android:layout_alignTop="@+id/delete"/>
+    </RelativeLayout>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SyncData"
+                android:id="@+id/syncData"
+                android:layout_gravity="center" android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ShowListView"
+                android:id="@+id/btn_getListview" android:layout_gravity="center"
+                android:layout_toRightOf="@+id/syncData" android:layout_alignTop="@+id/syncData"/>
+        <ListView
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/showListView"
+                android:layout_alignLeft="@+id/syncData" android:layout_below="@+id/syncData"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:id="@+id/btn_Profile"
+                android:layout_alignParentLeft="true" android:layout_marginLeft="182dp"
+                android:layout_alignParentTop="true"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show"
+                android:id="@+id/tbnProfileShow" android:layout_toRightOf="@+id/btn_Profile"
+                android:layout_alignTop="@+id/syncData"/>
+    </RelativeLayout>
+</LinearLayout>

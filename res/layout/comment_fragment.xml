@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="400dp" android:background="#f6f6f6">
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_gravity="center">
+        <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/comment_imgavata" android:src="@drawable/content_avatatest"
+                android:layout_marginTop="3dp" android:layout_marginBottom="3dp"/>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:background="@drawable/comment_edtbackground"
+                android:layout_gravity="center">
+            <EditText android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:background="@null"
+                      android:hint="Add Comment"
+                      android:id="@+id/comment_edtComment"
+                      android:layout_gravity="center_vertical" android:textColor="#333333" android:textSize="10sp"
+                      android:layout_marginLeft="10dp" android:gravity="center_vertical"
+                      android:layout_marginTop="5dp" android:paddingLeft="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0.5px" android:layout_gravity="right|center_vertical" android:background="#333333">
+    </LinearLayout>
+    <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/comment_lvComment"
+            android:layout_gravity="center"/>
+</LinearLayout>
