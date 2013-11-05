@@ -58,13 +58,9 @@ public class ProfileHander implements ResponseHandler
                     HttpResponse httpResponse = httpClient.execute(httpGet);
                     String responseString = EntityUtils.toString(httpResponse.getEntity());
                     profile = new Gson().fromJson(responseString, UserProfile.class).getData();
-//                    ContentValues[] contentValueses = new ContentValues[1];
-//                    contentValueses[0] = profile.getContentValues();
                     if (profile != null)
                     {
                         mFinchVideoProvider.update(OnlineDioContract.Profile.CONTENT_URI,profile.getContentValues(),null,null);
-                        //mFinchVideoProvider.bulkInsert(OnlineDioContract.Profile.CONTENT_URI, contentValueses);
-                        //mFinchVideoProvider.query(OnlineDioContract.Profile.CONTENT_URI,null,null,null,null);
                         Log.i(TAG, profile + "");
                     }
                 }
