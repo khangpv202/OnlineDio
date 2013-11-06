@@ -8,7 +8,8 @@ import java.io.IOException;
 /**
  * Enables custom handling of HttpResponse and the entities they contain.
  */
-public interface ResponseHandler {
+public interface ResponseHandler
+{
     void handleResponse(HttpResponse response, Uri uri)
             throws IOException;
 }

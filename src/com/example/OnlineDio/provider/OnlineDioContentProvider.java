@@ -86,7 +86,7 @@ public class OnlineDioContentProvider extends RESTfulContentProvider
                 SQLiteQueryBuilder builder = new SQLiteQueryBuilder();
                 builder.setTables(OnlineDioContract.Home.TABLE_NAME);
                 Cursor c = builder.query(db, projection, selection, selectionArgs, null, null, sortOrder);
-                c.setNotificationUri(getContext().getContentResolver(),uri);
+                c.setNotificationUri(getContext().getContentResolver(), uri);
                 return c;
             }
             case CONTENT_FEEDS:
@@ -96,18 +96,18 @@ public class OnlineDioContentProvider extends RESTfulContentProvider
                 builder1.setTables(OnlineDioContract.Home.TABLE_NAME);
                 builder1.appendWhere(OnlineDioContract.Home._ID + "=" + id);
                 Cursor c = builder1.query(db, projection, selection, selectionArgs, null, null, sortOrder);
-                c.setNotificationUri(getContext().getContentResolver(),uri);
+                c.setNotificationUri(getContext().getContentResolver(), uri);
             }
             case PROFILE_INFOR:
             {
                 Cursor c = db.query(OnlineDioContract.Profile.TABLE_NAME, projection, null, null, null, null, null);
                 if (c.getCount() == 0)
-                {
+                {   //todo: start for all problems
                     asyncQueryRequest(selection, QUERY_URI);
                 }
                 else
                 {
-                    c.setNotificationUri(getContext().getContentResolver(),uri);
+                    c.setNotificationUri(getContext().getContentResolver(), uri);
                     return c;
                 }
             }
@@ -158,6 +158,7 @@ public class OnlineDioContentProvider extends RESTfulContentProvider
                 if (id != -1)
                 {
                     getContext().getContentResolver().notifyChange(uri, null);
+
                 }
                 return OnlineDioContract.Profile.CONTENT_URI.buildUpon().appendPath(String.valueOf(id)).build();
             }
@@ -227,9 +228,9 @@ public class OnlineDioContentProvider extends RESTfulContentProvider
                 {
                     rowsUpdated = sqlDB.update(OnlineDioContract.Profile.TABLE_NAME,
                             values,
-                            OnlineDioContract.Profile._ID + "=" + id
+                            /*OnlineDioContract.Profile._ID + "=" + id
                                     + " and "
-                                    + selection,
+                                    + */selection,
                             selectionArgs);
                 }
                 break;

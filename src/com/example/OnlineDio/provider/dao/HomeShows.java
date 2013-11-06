@@ -99,19 +99,19 @@ public class HomeShows
             ContentValues contentValues = new ContentValues();
             contentValues.put(OnlineDioContract.Home._ID, id);
             contentValues.put(OnlineDioContract.Home.UserID, user_id);
-            contentValues.put(OnlineDioContract.Home.Title,title);
-            contentValues.put(OnlineDioContract.Home.Thumbnail,thumbnail);
-            contentValues.put(OnlineDioContract.Home.Description,description);
-            contentValues.put(OnlineDioContract.Home.SoundPath,sound_path);
-            contentValues.put(OnlineDioContract.Home.Played,played);
-            contentValues.put(OnlineDioContract.Home.CreatedAt,created_at);
-            contentValues.put(OnlineDioContract.Home.UpdatedAt,updated_at);
-            contentValues.put(OnlineDioContract.Home.Likes,likes);
-            contentValues.put(OnlineDioContract.Home.Viewed,viewed);
-            contentValues.put(OnlineDioContract.Home.Comments,comments);
-            contentValues.put(OnlineDioContract.Home.Username,username);
-            contentValues.put(OnlineDioContract.Home.DisplayName,display_name);
-            contentValues.put(OnlineDioContract.Home.Avatar,avatar);
+            contentValues.put(OnlineDioContract.Home.Title, title);
+            contentValues.put(OnlineDioContract.Home.Thumbnail, thumbnail);
+            contentValues.put(OnlineDioContract.Home.Description, description);
+            contentValues.put(OnlineDioContract.Home.SoundPath, sound_path);
+            contentValues.put(OnlineDioContract.Home.Played, played);
+            contentValues.put(OnlineDioContract.Home.CreatedAt, created_at);
+            contentValues.put(OnlineDioContract.Home.UpdatedAt, updated_at);
+            contentValues.put(OnlineDioContract.Home.Likes, likes);
+            contentValues.put(OnlineDioContract.Home.Viewed, viewed);
+            contentValues.put(OnlineDioContract.Home.Comments, comments);
+            contentValues.put(OnlineDioContract.Home.Username, username);
+            contentValues.put(OnlineDioContract.Home.DisplayName, display_name);
+            contentValues.put(OnlineDioContract.Home.Avatar, avatar);
             return contentValues;
         }
 

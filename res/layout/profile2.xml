@@ -13,7 +13,7 @@
 
         <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent" android:id="@+id/wholeLayout">
             <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -34,7 +34,8 @@
                         android:layout_centerVertical="true"
                         android:id="@+id/profile_ibSave"
                         android:layout_alignParentRight="true"
-                        android:background="@drawable/btn_save" android:padding="@dimen/home_padding_ibDone"
+                        android:background="@drawable/btn_save"
+                        android:padding="@dimen/home_padding_ibDone"
                         android:layout_margin="@dimen/home_margin_ibDone"
                         />
                 <TextView
@@ -105,6 +106,7 @@
                             android:id="@+id/profile_etDisplayName"
                             android:layout_centerVertical="true"
                             android:background="@null"
+                            android:enabled="false"
                             android:hint="@string/etDisplayname" android:layout_toRightOf="@+id/textView1"
                             android:layout_alignBaseline="@+id/textView1"
                             android:layout_marginLeft="@dimen/profile_marginLeft_tvYourDisplayName"
@@ -240,7 +242,7 @@
                             android:focusable="false"
                             android:inputType="date"
                             android:textSize="@dimen/profile_textSize_etBirthday"
-                            android:id="@+id/profile_dpBirthday" android:layout_gravity="center_horizontal"
+                            android:id="@+id/profile_etBirthday" android:layout_gravity="center_horizontal"
                             android:layout_alignLeft="@+id/profile_etFullName"
                             android:layout_below="@+id/viewBelowPhone"/>
                     <View
@@ -305,14 +307,14 @@
                                 android:button="@null"
                                 android:background="@drawable/custome_radiobutton_female"
                                 android:checked="true"
-                                android:id="@+id/radioButton"
+                                android:id="@+id/genderMale"
                                 />
                         <RadioButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:background="@drawable/custom_radiobutton_male"
                                 android:button="@null"
-                                android:id="@+id/radioButton1" android:checked="false"/>
+                                android:id="@+id/genderFemale" android:checked="false"/>
                     </RadioGroup>
                     <Spinner
                             android:layout_width="wrap_content"
@@ -347,7 +349,7 @@
                         android:gravity="top|left"
                         android:background="@drawable/image_cell_description"
                         android:inputType="textMultiLine|textImeMultiLine"
-                        android:id="@+id/editText2" android:layout_below="@+id/textView4"
+                        android:id="@+id/profile_etDescription" android:layout_below="@+id/textView4"
                         android:layout_alignParentBottom="true"
                         android:layout_marginLeft="@dimen/profile_marginLeft_etDescription"
                         android:layout_marginRight="@dimen/profile_marginRight_etDescription"

@@ -161,12 +161,12 @@ public class HomeFragment extends Fragment
         new DownloadImageTask((ImageView) view.findViewById(R.id.ivAvatars)).execute(cursor.getString(15));
     }
 
-    private void refreshDataOfListView()
+   /* private void refreshDataOfListView()
     {
 
         homeCursor = getActivity().managedQuery(OnlineDioContract.Home.CONTENT_URI, null,
                 null, null, null);
         mAdapter.changeCursor(homeCursor);
-    }
+    }*/
 
 }

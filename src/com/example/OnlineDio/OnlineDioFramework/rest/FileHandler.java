@@ -12,29 +12,35 @@ import java.io.InputStream;
  * Writes data from urls into a local file cache that can be referenced by a
  * database ID.
  */
-public class FileHandler implements ResponseHandler {
+public class FileHandler implements ResponseHandler
+{
     private String mId;
     private File mCacheDir;
 
-    public FileHandler(File cacheDir, String id) {
+    public FileHandler(File cacheDir, String id)
+    {
         mCacheDir = cacheDir;
         mId = id;
     }
 
-    public File getFile(String ID) {
+    public File getFile(String ID)
+    {
         return new File(mCacheDir, ID);
     }
 
     public void handleResponse(HttpResponse response, Uri uri)
-            throws IOException {
+            throws IOException
+    {
         InputStream urlStream = response.getEntity().getContent();
         FileOutputStream fout =
                 new FileOutputStream(getFile(mId));
         byte[] bytes = new byte[256];
         int r;
-        do {
+        do
+        {
             r = urlStream.read(bytes);
-            if (r >= 0) {
+            if (r >= 0)
+            {
                 fout.write(bytes, 0, r);
             }
         } while (r >= 0);

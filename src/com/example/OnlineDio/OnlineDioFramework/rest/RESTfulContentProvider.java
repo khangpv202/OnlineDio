@@ -19,21 +19,25 @@ import java.util.Map;
  * custom methods for interpreting REST based content such as, RSS, ATOM,
  * JSON, etc.
  */
-public abstract class RESTfulContentProvider extends ContentProvider {
+public abstract class RESTfulContentProvider extends ContentProvider
+{
     protected FileHandlerFactory mFileHandlerFactory;
     private Map<String, UriRequestTask> mRequestsInProgress =
             new HashMap<String, UriRequestTask>();
 
-    public RESTfulContentProvider() {
+    public RESTfulContentProvider()
+    {
     }
 
-    public void setFileHandlerFactory(FileHandlerFactory fileHandlerFactory) {
+    public void setFileHandlerFactory(FileHandlerFactory fileHandlerFactory)
+    {
         mFileHandlerFactory = fileHandlerFactory;
     }
 
     public abstract Uri insert(Uri uri, ContentValues cv, SQLiteDatabase db);
 
-    private UriRequestTask getRequestTask(String queryText) {
+    private UriRequestTask getRequestTask(String queryText)
+    {
         return mRequestsInProgress.get(queryText);
     }
 
@@ -44,8 +48,10 @@ public abstract class RESTfulContentProvider extends ContentProvider {
      */
     public abstract SQLiteDatabase getDatabase();
 
-    public void requestComplete(String mQueryText) {
-        synchronized (mRequestsInProgress) {
+    public void requestComplete(String mQueryText)
+    {
+        synchronized (mRequestsInProgress)
+        {
             mRequestsInProgress.remove(mQueryText);
         }
     }
@@ -60,10 +66,11 @@ public abstract class RESTfulContentProvider extends ContentProvider {
      */
     protected abstract ResponseHandler newResponseHandler(String requestTag);
 
-    UriRequestTask newQueryTask(String requestTag, String url) {
+    UriRequestTask newQueryTask(String requestTag, String url)
+    {
         UriRequestTask requestTask;
 
-        final HttpGet get = new HttpGet(url+requestTag);
+        final HttpGet get = new HttpGet(url + requestTag);
         ResponseHandler handler = newResponseHandler(requestTag);
         requestTask = new UriRequestTask(requestTag, this, get,
                 handler, getContext());
@@ -78,12 +85,15 @@ public abstract class RESTfulContentProvider extends ContentProvider {
      * @param queryTag unique tag that identifies this request.
      * @param queryUri the complete URI that should be access by this request.
      */
-    public void asyncQueryRequest(String queryTag, String queryUri) {
-        synchronized (mRequestsInProgress) {
+    public void asyncQueryRequest(String queryTag, String queryUri)
+    {
+        synchronized (mRequestsInProgress)
+        {
             //getRequestTask: check if exist queryTag in list query.
             UriRequestTask requestTask = getRequestTask(queryTag);
             //if don't exist, create new queryTask and add its queryTask into list query
-            if (requestTask == null) {
+            if (requestTask == null)
+            {
                 requestTask = newQueryTask(queryTag, queryUri);
                 Thread t = new Thread(requestTask);
                 // allows other requests to run in parallel.
@@ -98,7 +108,8 @@ public abstract class RESTfulContentProvider extends ContentProvider {
      *
      * @param id the database id used to reference the downloaded url.
      */
-    public void cacheUri2File(String id, String url) {
+    public void cacheUri2File(String id, String url)
+    {
         // use media id as a unique request tag
         final HttpGet get = new HttpGet(url);
         UriRequestTask requestTask = new UriRequestTask(
@@ -108,18 +119,24 @@ public abstract class RESTfulContentProvider extends ContentProvider {
         t.start();
     }
 
-    public void deleteFile(String id) {
+    public void deleteFile(String id)
+    {
         mFileHandlerFactory.delete(id);
     }
 
-    public String getCacheName(String id) {
+    public String getCacheName(String id)
+    {
         return mFileHandlerFactory.getFileName(id);
     }
 
-    public static String encode(String gDataQuery) {
-        try {
+    public static String encode(String gDataQuery)
+    {
+        try
+        {
             return URLEncoder.encode(gDataQuery, "UTF-8");
-        } catch (UnsupportedEncodingException e) {
+        }
+        catch (UnsupportedEncodingException e)
+        {
             Log.d(OnlineDio.LOG_TAG, "could not decode UTF-8," +
                     " this should not happen");
         }

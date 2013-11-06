@@ -16,12 +16,13 @@ import com.example.OnlineDio.R;
 public class CommentPostActivity extends FragmentActivity
 {
     private Button comment_btCancel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.comment_post_layout);
-        comment_btCancel = (Button)findViewById(R.id.comment_btCancel);
+        comment_btCancel = (Button) findViewById(R.id.comment_btCancel);
         comment_btCancel.setOnClickListener(new View.OnClickListener()
         {
             @Override

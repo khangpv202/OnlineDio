@@ -33,7 +33,7 @@ public class CommentFragment extends Fragment
     {
         View view = inflater.inflate(R.layout.comment_fragment, container, false);
         listView = (ListView) view.findViewById(R.id.comment_lvComment);
-        comment_edtComment = (EditText)view.findViewById(R.id.comment_edtComment);
+        comment_edtComment = (EditText) view.findViewById(R.id.comment_edtComment);
         comment_edtComment.setOnClickListener(new View.OnClickListener()
         {
             @Override

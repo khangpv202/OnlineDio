@@ -19,9 +19,11 @@ public class OnlineSyncService extends Service
     @Override
     public void onCreate()
     {
-        synchronized (sSyncAdapterLock){
-            if(sSyncAdapter == null){
-                sSyncAdapter = new OnlineSyncAdapter(getApplicationContext(),true);
+        synchronized (sSyncAdapterLock)
+        {
+            if (sSyncAdapter == null)
+            {
+                sSyncAdapter = new OnlineSyncAdapter(getApplicationContext(), true);
             }
         }
     }
@@ -29,6 +31,6 @@ public class OnlineSyncService extends Service
     @Override
     public IBinder onBind(Intent intent)
     {
-       return sSyncAdapter.getSyncAdapterBinder();
+        return sSyncAdapter.getSyncAdapterBinder();
     }
 }

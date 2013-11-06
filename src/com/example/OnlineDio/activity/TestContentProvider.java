@@ -34,7 +34,7 @@ public class TestContentProvider extends Activity
 {
 
     public final static String PARAM_USER_PASS = "USER_PASS";
-    public static String authenTest= null;
+    public static String authenTest = null;
     SimpleCursorAdapter mAdapter;
     private AccountManager mAccountManager;
     private String authToken = null;
@@ -137,7 +137,6 @@ public class TestContentProvider extends Activity
                 content.put(OnlineDioContract.Home.UserID, 10);
                 content.put(OnlineDioContract.Home.DisplayName, "nothing");
                 getContentResolver().insert(OnlineDioContract.Home.CONTENT_URI, content);
-                refreshDataOfListView();
             }
         });
 
@@ -216,7 +215,6 @@ public class TestContentProvider extends Activity
                 Log.i("Account getted", au + "");
                 checkSync = true;
                 refreshAuthenTokenAndSync();
-                refreshDataOfListView();
                 checkSync = false;
             }
         });
@@ -244,25 +242,20 @@ public class TestContentProvider extends Activity
                 /*Account[] accounts = mAccountManager.getAccountsByType(OnlineDioContract.ACCOUNT_TYPE);
                 String au = mAccountManager.peekAuthToken(accounts[0], AccountGeneral.AUTHTOKEN_TYPE_FULL_ACCESS);*/
                 String userID = "586";
-                refreshAuthenTokenAndLoadProfile(userID);
+                refreshAuthenTokenAndLoadProfile();
 //                au = mAccountManager.peekAuthToken(accounts[0], AccountGeneral.AUTHTOKEN_TYPE_FULL_ACCESS);
             }
         });
     }
 
-    private void refreshDataOfListView()
-    {
-
-        homeCursor = managedQuery(OnlineDioContract.Home.CONTENT_URI, null,
-                null, null, null);
-        mAdapter.changeCursor(homeCursor);
-    }
 
     private void setThumbResource(View view, Cursor cursor)
     {
         new DownloadImageTask((ImageView) view.findViewById(R.id.ivAvatars)).execute(cursor.getString(3));
     }
-    private void refreshAuthenTokenAndLoadProfile(final String userID){
+
+    private void refreshAuthenTokenAndLoadProfile()
+    {
         final Account account = mAccountManager.getAccountsByType(OnlineDioContract.ACCOUNT_TYPE)[0];
         final String userName = account.name;
         final String userPass = mAccountManager.getPassword(account);
@@ -287,6 +280,7 @@ public class TestContentProvider extends Activity
                     data.putBundle(AccountManager.KEY_USERDATA, userData);
 
                     data.putString(PARAM_USER_PASS, userPass);
+                    data.putString("USER_ID", user.getUser_id());
 
                     mAccountManager.addAccountExplicitly(account, userPass, data);
                     mAccountManager.setAuthToken(account, AccountGeneral.AUTHTOKEN_TYPE_FULL_ACCESS, user.getAccess_token());
@@ -310,13 +304,12 @@ public class TestContentProvider extends Activity
                 super.onPostExecute(intent);
                 String token = intent.getStringExtra(AccountManager.KEY_AUTHTOKEN);
                 authenTest = token;
-                Cursor c = managedQuery(OnlineDioContract.Profile.CONTENT_URI,null,userID,null,null);
-
-//                UserProfile.Profile profile = new ParseComServer().getUserProfile("558", token);
-//                System.out.println(profile);
+                String userID = intent.getStringExtra("USER_ID");
+                Cursor c = managedQuery(OnlineDioContract.Profile.CONTENT_URI, null, userID, null, null);
             }
         }.execute();
     }
+
     private void refreshAuthenTokenAndSync()
     {
         final Account account = mAccountManager.getAccountsByType(OnlineDioContract.ACCOUNT_TYPE)[0];

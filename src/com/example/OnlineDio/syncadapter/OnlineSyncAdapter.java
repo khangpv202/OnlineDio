@@ -39,57 +39,75 @@ public class OnlineSyncAdapter extends AbstractThreadedSyncAdapter
     @Override
     public void onPerformSync(Account account, Bundle extras, String authority, ContentProviderClient provider, SyncResult syncResult)
     {
-       try{
-           String authToken = mAccountManager.blockingGetAuthToken(account,
-                   AccountGeneral.AUTHTOKEN_TYPE_FULL_ACCESS, true);
-           String userObjectId = mAccountManager.getUserData(account,
-                   AccountGeneral.USERDATA_USER_OBJ_ID);
+        try
+        {
+            String authToken = mAccountManager.blockingGetAuthToken(account,
+                    AccountGeneral.AUTHTOKEN_TYPE_FULL_ACCESS, true);
+            String userObjectId = mAccountManager.getUserData(account,
+                    AccountGeneral.USERDATA_USER_OBJ_ID);
 
-           ParseComServer parseComServer = new ParseComServer();
-           List<HomeShows.HomeShow> remoteHomeShowList = parseComServer.userFeedContent(authToken,mAccountManager);
-           Log.i(TAG+"listHomeLoaded",remoteHomeShowList+ "");
-           System.out.println(remoteHomeShowList);
+            ParseComServer parseComServer = new ParseComServer();
+            List<HomeShows.HomeShow> remoteHomeShowList = parseComServer.userFeedContent(authToken, mAccountManager);
+            Log.i(TAG + "listHomeLoaded", remoteHomeShowList + "");
+            System.out.println(remoteHomeShowList);
 
-           // Get shows from local
-           ArrayList<HomeShows.HomeShow> localTvShows = new ArrayList<HomeShows.HomeShow>();
-           Cursor curTvShows = provider.query(OnlineDioContract.Home.CONTENT_URI, null, null, null, null);
-           if (curTvShows != null) {
-               while (curTvShows.moveToNext()) {
-                   localTvShows.add(new HomeShows().fromCursor(curTvShows));
-               }
-               curTvShows.close();
-           }
+            // Get shows from local
+            ArrayList<HomeShows.HomeShow> localHomeShows = new ArrayList<HomeShows.HomeShow>();
+            Cursor curHomeShow = provider.query(OnlineDioContract.Home.CONTENT_URI, null, null, null, null);
+            if (curHomeShow != null)
+            {
+                while (curHomeShow.moveToNext())
+                {
+                    localHomeShows.add(new HomeShows().fromCursor(curHomeShow));
+                }
+                curHomeShow.close();
+            }
 
-           // See what Remote shows are missing on Local
-           ArrayList<HomeShows.HomeShow> showsToLocal = new ArrayList<HomeShows.HomeShow>();
-           for ( HomeShows.HomeShow remoteTvShow : remoteHomeShowList) {
-               if (!localTvShows.contains(remoteTvShow)) // TODO REMOVE THIS
-                   showsToLocal.add(remoteTvShow);
-           }
-           if (showsToLocal.size() == 0) {
-               Log.d("udinic", TAG + "> No server changes to update local database");
-           } else {
-               Log.d("udinic", TAG + "> Updating local database with remote changes");
+            // See what Remote shows are missing on Local
+            ArrayList<HomeShows.HomeShow> showsToLocal = new ArrayList<HomeShows.HomeShow>();
+            for (HomeShows.HomeShow home : remoteHomeShowList)
+            {
+                if (!localHomeShows.contains(home)) // TODO REMOVE THIS
+                {
+                    showsToLocal.add(home);
+                }
+            }
+            if (showsToLocal.size() == 0)
+            {
+                Log.d("udinic", TAG + "> No server changes to update local database");
+            }
+            else
+            {
+                Log.d("udinic", TAG + "> Updating local database with remote changes");
 
-               // Updating local tv shows
-               int i = 0;
-               ContentValues showsToLocalValues[] = new ContentValues[showsToLocal.size()];
-               for (HomeShows.HomeShow localTvShow : showsToLocal) {
-                   Log.d("udinic", TAG + "> Remote -> Local [" + localTvShow.display_name + "]");
-                   showsToLocalValues[i++] = localTvShow.getContentValues();
-               }
-               provider.bulkInsert(OnlineDioContract.Home.CONTENT_URI, showsToLocalValues);
-           }
-       }catch (OperationCanceledException e) {
-           e.printStackTrace();
-       } catch (IOException e) {
-           syncResult.stats.numIoExceptions++;
-           e.printStackTrace();
-       } catch (AuthenticatorException e) {
-           syncResult.stats.numAuthExceptions++;
-           e.printStackTrace();
-       } catch (Exception e) {
-           e.printStackTrace();
-       }
+                // Updating local tv shows
+                int i = 0;
+                ContentValues showsToLocalValues[] = new ContentValues[showsToLocal.size()];
+                for (HomeShows.HomeShow home : showsToLocal)
+                {
+                    Log.d("udinic", TAG + "> Remote -> Local [" + home.display_name + "]");
+                    showsToLocalValues[i++] = home.getContentValues();
+                }
+                provider.bulkInsert(OnlineDioContract.Home.CONTENT_URI, showsToLocalValues);
+            }
+        }
+        catch (OperationCanceledException e)
+        {
+            e.printStackTrace();
+        }
+        catch (IOException e)
+        {
+            syncResult.stats.numIoExceptions++;
+            e.printStackTrace();
+        }
+        catch (AuthenticatorException e)
+        {
+            syncResult.stats.numAuthExceptions++;
+            e.printStackTrace();
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
     }
 }

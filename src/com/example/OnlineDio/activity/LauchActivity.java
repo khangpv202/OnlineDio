@@ -6,6 +6,8 @@ import android.accounts.AccountManagerCallback;
 import android.accounts.AccountManagerFuture;
 import android.app.Activity;
 import android.content.Intent;
+import android.database.Cursor;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,6 +15,9 @@ import android.widget.Button;
 import android.widget.Toast;
 import com.example.OnlineDio.R;
 import com.example.OnlineDio.accounts.AccountGeneral;
+import com.example.OnlineDio.accounts.User;
+import com.example.OnlineDio.provider.OnlineDioContract;
+import com.example.OnlineDio.util.StreamUtils;
 
 /**
  * Created with IntelliJ IDEA.
@@ -27,6 +32,7 @@ public class LauchActivity extends Activity
     private String authToken = null;
     private Account mConnectedAccount;
     private AccountManager mAccountManager;
+    public static String authenProfile;
 
     public void onCreate(Bundle savedInstanceState)
     {
@@ -44,41 +50,57 @@ public class LauchActivity extends Activity
                 getTokenForAccountCreateIfNeeded(AccountGeneral.ACCOUNT_TYPE, AccountGeneral.AUTHTOKEN_TYPE_FULL_ACCESS);
             }
         });
+        //refreshAuthenTokenAndLoadProfile();
     }
 
-    private void getTokenForAccountCreateIfNeeded(String accountType, String authTokenType) {
+
+    private void getTokenForAccountCreateIfNeeded(String accountType, String authTokenType)
+    {
         mAccountManager.getAuthTokenByFeatures(accountType, authTokenType, null, this, null, null,
-                new AccountManagerCallback<Bundle>() {
+                new AccountManagerCallback<Bundle>()
+                {
                     @Override
-                    public void run(AccountManagerFuture<Bundle> future) {
+                    public void run(AccountManagerFuture<Bundle> future)
+                    {
                         Bundle bnd = null;
-                        try {
+                        try
+                        {
                             bnd = future.getResult();
                             authToken = bnd.getString(AccountManager.KEY_AUTHTOKEN);
-                            if (authToken != null) {
+                            if (authToken != null)
+                            {
                                 String accountName = bnd.getString(AccountManager.KEY_ACCOUNT_NAME);
                                 mConnectedAccount = new Account(accountName, AccountGeneral.ACCOUNT_TYPE);
                                 //initButtonsAfterConnect();
                                 Intent i = new Intent(LauchActivity.this, NavigationActivity.class);
+
                                 startActivity(i);
                             }
                             showMessage(((authToken != null) ? "SUCCESS!\ntoken: " + authToken : "FAIL"));
                             Log.d("OnlineDio", "GetTokenForAccount Bundle is " + bnd);
 
-                        } catch (Exception e) {
+                        }
+                        catch (Exception e)
+                        {
                             e.printStackTrace();
                         }
                     }
                 }
                 , null);
     }
-    private void showMessage(final String msg) {
-        if (msg == null || msg.trim().equals(""))
-            return;
 
-        runOnUiThread(new Runnable() {
+    private void showMessage(final String msg)
+    {
+        if (msg == null || msg.trim().equals(""))
+        {
+            return;
+        }
+
+        runOnUiThread(new Runnable()
+        {
             @Override
-            public void run() {
+            public void run()
+            {
                 Toast.makeText(getBaseContext(), msg, Toast.LENGTH_SHORT).show();
             }
         });

@@ -69,6 +69,7 @@ public class ContentFragment extends Fragment
         Fragment f = new ContentFragment();
         return f;
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {

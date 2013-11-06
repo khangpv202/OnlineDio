@@ -1,5 +1,7 @@
 package com.example.OnlineDio.activity;
 
+import android.accounts.Account;
+import android.accounts.AccountManager;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
@@ -9,6 +11,7 @@ import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ResolveInfo;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -21,6 +24,11 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.*;
 import com.example.OnlineDio.R;
+import com.example.OnlineDio.accounts.AccountGeneral;
+import com.example.OnlineDio.accounts.ParseComServer;
+import com.example.OnlineDio.model.ProfileUpdate;
+import com.example.OnlineDio.model.UserProfile;
+import com.example.OnlineDio.provider.OnlineDioContract;
 import com.example.OnlineDio.util.CircularImageView;
 import com.example.OnlineDio.util.CropOption;
 import com.example.OnlineDio.util.CropOptionAdapter;
@@ -41,6 +49,8 @@ import static android.content.DialogInterface.OnClickListener;
  */
 public class ProfileActivity extends Activity
 {
+    private AccountManager mAccountManager;
+    SimpleCursorAdapter mCursorAdapter;
     private EditText dpBirthday;
     private EditText etCountry;
     private int year;
@@ -50,12 +60,21 @@ public class ProfileActivity extends Activity
     private RelativeLayout rlCoverImage;
     private CircularImageView ibProfileIcon;
     private AlertDialog.Builder builder;
+    private EditText etPhoneNumber;
     private AlertDialog dialog;
     private ImageButton ibProfileBack;
+    private EditText etDescription;
     private EditText etDisplayName;
     private ImageView ivCancelDisplayName;
     private EditText etFullName;
     private ImageButton ibCleanFullName;
+    private RadioButton male;
+    private RadioButton female;
+    private ImageButton ibSave;
+
+    String[] listCountry;
+
+    String[] listCodeCountry;
 
     private Uri mImageCaptureUri;
 
@@ -64,6 +83,7 @@ public class ProfileActivity extends Activity
     private static final int PICK_FROM_FILE = 3;
 
     private boolean coverOrBackground = false;
+    private Cursor profileCursor;
 
 
     @Override
@@ -71,9 +91,12 @@ public class ProfileActivity extends Activity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile2);
+        listCountry = getResources().getStringArray(R.array.listCountry);
+        listCodeCountry = getResources().getStringArray(R.array.codeCountry);
         final String[] items = new String[]{"Take from camera", "Select from gallery"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.select_dialog_item, items);
-        dpBirthday = (EditText) findViewById(R.id.profile_dpBirthday);
+        ibSave = (ImageButton) findViewById(R.id.profile_ibSave);
+        dpBirthday = (EditText) findViewById(R.id.profile_etBirthday);
         spListCountry = (Spinner) findViewById(R.id.profile_spListCountry);
         etCountry = (EditText) findViewById(R.id.profile_etCountry);
         rlCoverImage = (RelativeLayout) findViewById(R.id.profile_rlCoverImage);
@@ -83,7 +106,13 @@ public class ProfileActivity extends Activity
         ivCancelDisplayName = (ImageView) findViewById(R.id.profile_ivCleanDisplayName);
         etFullName = (EditText) findViewById(R.id.profile_etFullName);
         ibCleanFullName = (ImageButton) findViewById(R.id.profile_ibClearFullName);
+        etPhoneNumber = (EditText) findViewById(R.id.profile_etPhoneNumber);
+        male = (RadioButton) findViewById(R.id.genderMale);
+        female = (RadioButton) findViewById(R.id.genderFemale);
+        etDescription = (EditText) findViewById(R.id.profile_etDescription);
 
+        mAccountManager = AccountManager.get(getBaseContext());
+        ibSave.setOnClickListener(clickedSaveButton);
         etCountry.setOnClickListener(clickedCountry);
         dpBirthday.setOnClickListener(setBirthdayDate);
         spListCountry.setOnItemSelectedListener(itemSelect);
@@ -92,6 +121,7 @@ public class ProfileActivity extends Activity
         builder.setAdapter(adapter, dialogInterface);
         dialog = builder.create();
         initialCurrentTime();
+
         rlCoverImage.setOnClickListener(onClickCoverImage);
         ibProfileIcon.setOnClickListener(onClickProfileImage);
         ibProfileBack.setOnClickListener(onClickProfileBackImage);
@@ -101,7 +131,45 @@ public class ProfileActivity extends Activity
 
         etFullName.addTextChangedListener(textChangeDisplayName);
         etFullName.setOnFocusChangeListener(focusChangeDisplayName);
+
+
+        profileCursor = managedQuery(OnlineDioContract.Profile.CONTENT_URI, null, null, null, null);
+        if (profileCursor != null && profileCursor.moveToFirst())
+        {
+            UserProfile.Profile profile = UserProfile.Profile.fromCursor(profileCursor);
+            etDisplayName.setText(profile.getDisplay_name());
+            etFullName.setText(profile.getFull_name());
+            etPhoneNumber.setText(profile.getPhone());
+            dpBirthday.setText(profile.getBirthday());
+            if (profile.getGender().equals("1"))
+            {
+                male.setChecked(true);
+            }
+            else
+            {
+                female.setChecked(true);
+            }
+            int positionOfCountry = findPositionOfCountry(profile.getCountry_id());
+            etCountry.setText(listCountry[positionOfCountry]);
+            etDescription.setText(profile.getDescription());
+        }
+
     }
+
+    private int findPositionOfCountry(String country_id)
+    {
+        int result = 0;
+        for (int i = 0; i < listCodeCountry.length; i++)
+        {
+            if (listCodeCountry[i].equals(country_id))
+            {
+                result = i;
+                break;
+            }
+        }
+        return result;
+    }
+
 
     private View.OnFocusChangeListener focusChangeDisplayName = new View.OnFocusChangeListener()
     {
@@ -115,7 +183,7 @@ public class ProfileActivity extends Activity
                     {
                         ivCancelDisplayName.setVisibility(View.INVISIBLE);
                     }
-                    else if (!etDisplayName.getText().toString().isEmpty() && b)
+                    else if (!etDisplayName.getText().toString().isEmpty() && b && etDisplayName.isEnabled())
                     {
                         ivCancelDisplayName.setVisibility(View.VISIBLE);
                     }
@@ -435,4 +503,57 @@ public class ProfileActivity extends Activity
     {
         return new DatePickerDialog(this, datePickerListener, year, month, day);
     }
+
+    private View.OnClickListener clickedSaveButton = new View.OnClickListener()
+    {
+        @Override
+        public void onClick(View view)
+        {
+            String fullName = etFullName.getText().toString();
+            String phoneNumber = etPhoneNumber.getText().toString();
+            String birthDay = dpBirthday.getText().toString();
+            String gender = "";
+            if (male.isChecked())
+            {
+                gender = "1";
+            }
+            else
+            {
+                gender = "2";
+            }
+
+            String country = listCodeCountry[spListCountry.getSelectedItemPosition()];
+            String description = etDescription.getText().toString();
+            Cursor c = managedQuery(OnlineDioContract.Profile.CONTENT_URI, null, null, null, null);
+            ProfileUpdate profile = null;
+            UserProfile.Profile profileUpdateIntoDB = null;
+            String id = "";
+            String _id = "";
+            if (c.moveToFirst())
+            {
+                id = c.getString(c.getColumnIndex(OnlineDioContract.Profile.Id));
+                _id = c.getString(c.getColumnIndex(OnlineDioContract.Profile._ID));
+                String displayName = c.getString(c.getColumnIndex(OnlineDioContract.Profile.DisplayName));
+                profile = new ProfileUpdate(id, fullName, displayName, phoneNumber, birthDay, gender, country, description);
+                profileUpdateIntoDB = UserProfile.Profile.fromCursor(c);
+                profileUpdateIntoDB.setFieldEditedOnView(fullName, phoneNumber, birthDay, gender, country, description);
+            }
+            /*new UserProfile.Profile(_id,id,fullName,phoneNumber,birthDay,gender,"pq",description);*/
+            c.close();
+            getContentResolver().update(OnlineDioContract.Profile.CONTENT_URI, profileUpdateIntoDB.getContentValues(), OnlineDioContract.Profile._ID + "=" + _id, null);
+            final ProfileUpdate finalProfile = profile;
+            Thread t = new Thread()
+            {
+                @Override
+                public void run()
+                {
+                    super.run();
+                    Account account = mAccountManager.getAccountsByType(OnlineDioContract.ACCOUNT_TYPE)[0];
+                    String authenToken = mAccountManager.peekAuthToken(account, AccountGeneral.AUTHTOKEN_TYPE_FULL_ACCESS);
+                    ParseComServer.putUserProfile(finalProfile.getId(), authenToken, finalProfile);
+                }
+            };
+            t.start();
+        }
+    };
 }

@@ -16,7 +16,8 @@ public class OnlineDioApplication extends Application
     private final String TAG = this.getClass().getSimpleName();
 
     @Override
-    public void onCreate() {
+    public void onCreate()
+    {
         // First, call the parent class
         super.onCreate();
 
@@ -27,21 +28,25 @@ public class OnlineDioApplication extends Application
     }
 
     @Override
-    public void onTerminate() {
+    public void onTerminate()
+    {
         Log.i(TAG, "onTerminate");
 
     }
 
     @Override
-    public void onLowMemory() {
+    public void onLowMemory()
+    {
         // In-memory caches should be thrown overboard here
         Log.i(TAG, "onLowMemory");
     }
 
     @Override
-    public void onConfigurationChanged(Configuration newConfig) {
+    public void onConfigurationChanged(Configuration newConfig)
+    {
         Log.i(TAG, "onConifgurationChanged");
-        if (Log.isLoggable(TAG, Log.VERBOSE)) {
+        if (Log.isLoggable(TAG, Log.VERBOSE))
+        {
             Log.v(TAG, newConfig.toString());
         }
     }

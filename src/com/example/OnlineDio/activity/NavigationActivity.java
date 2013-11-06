@@ -1,7 +1,10 @@
 package com.example.OnlineDio.activity;
 
+import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.content.Intent;
+import android.database.Cursor;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -14,7 +17,11 @@ import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import com.example.OnlineDio.R;
+import com.example.OnlineDio.accounts.AccountGeneral;
+import com.example.OnlineDio.accounts.User;
+import com.example.OnlineDio.provider.OnlineDioContract;
 import com.example.OnlineDio.util.ListNavigationAdapter;
+import com.example.OnlineDio.util.StreamUtils;
 
 /**
  * Created with IntelliJ IDEA.
@@ -36,6 +43,7 @@ public class NavigationActivity extends FragmentActivity
     final String profilefragment = "com.example.OnlineDio.activity.ProfileActivity";
     private LinearLayout layoutDrawer;
     private LinearLayout llProfile;
+    public static String authenProfile;
 
 
     @Override
@@ -83,30 +91,71 @@ public class NavigationActivity extends FragmentActivity
             @Override
             public void onClick(View v)
             {
-               /* Thread t = new Thread(){
-                    @Override
-                    public void run()
-                    {
-                        super.run();
-
-                        Account account = mAccountManager.getAccountsByType(OnlineDioContract.ACCOUNT_TYPE)[0];
-
-                        try
-                        {
-                            User user = AccountGeneral.sServerAuthenticate.userSignIn(account.name, StreamUtils.convertToMd5(mAccountManager.getPassword(account)), AccountGeneral.AUTHTOKEN_TYPE_FULL_ACCESS);
-                        }
-                        catch (Exception e)
-                        {
-                            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-                        }
-                    }
-                };*/
-
                 Intent i = new Intent(getApplicationContext(), ProfileActivity.class);
+
                 startActivity(i);
             }
         });
-
+        refreshAuthenTokenAndLoadProfile();
     }
+
+    private void refreshAuthenTokenAndLoadProfile()
+    {
+        final Account account = mAccountManager.getAccountsByType(OnlineDioContract.ACCOUNT_TYPE)[0];
+        final String userName = account.name;
+        final String userPass = mAccountManager.getPassword(account);
+        Log.i("OLD Authentication", "" + mAccountManager.peekAuthToken(account, AccountGeneral.AUTHTOKEN_TYPE_FULL_ACCESS));
+        new AsyncTask<String, Void, Intent>()
+        {
+
+            @Override
+            protected Intent doInBackground(String... strings)
+            {
+                Bundle data = new Bundle();
+                try
+                {
+                    User user = AccountGeneral.sServerAuthenticate.userSignIn(userName, StreamUtils.convertToMd5(userPass), AccountGeneral.AUTHTOKEN_TYPE_FULL_ACCESS);
+//                    data.putString(AccountManager.KEY_ACCOUNT_NAME, userName);
+                    data.putString(AccountManager.KEY_ACCOUNT_TYPE, OnlineDioContract.ACCOUNT_TYPE);
+                    data.putString(AccountManager.KEY_AUTHTOKEN, user.getAccess_token());
+
+                    // We keep the user's object id as an extra data on the account.
+                    // It's used later for determine ACL for the data we send to the Parse.com service
+                    Bundle userData = new Bundle();
+//                    userData.putString(AccountGeneral.USERDATA_USER_OBJ_ID, user.getUser_id());
+//                    data.putBundle(AccountManager.KEY_USERDATA, userData);
+                    authenProfile = user.getAccess_token();
+                    Log.i("New Authentication", "" + authenProfile + "\n" + user.getAccess_token());
+//                    data.putString(PARAM_USER_PASS, userPass);
+                    data.putString("USER_ID", user.getUser_id());
+
+                    mAccountManager.addAccountExplicitly(account, userPass, data);
+                    mAccountManager.setAuthToken(account, AccountGeneral.AUTHTOKEN_TYPE_FULL_ACCESS, user.getAccess_token());
+
+
+                }
+                catch (Exception e)
+                {
+//                    data.putString("KEY_ERROR_MESSAGE", e.getMessage());
+                    System.out.println("ba dao");
+                }
+                final Intent res = new Intent();
+                res.putExtras(data);
+                return res;
+
+            }
+
+            @Override
+            protected void onPostExecute(Intent intent)
+            {
+                super.onPostExecute(intent);
+                String token = intent.getStringExtra(AccountManager.KEY_AUTHTOKEN);
+//                authenTest = token;
+                String userID = intent.getStringExtra("USER_ID");
+                Cursor c = managedQuery(OnlineDioContract.Profile.CONTENT_URI, null, userID, null, null);
+            }
+        }.execute();
+    }
+
 
 }

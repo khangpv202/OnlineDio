@@ -4,7 +4,7 @@ import android.net.Uri;
 import android.util.Log;
 import com.example.OnlineDio.OnlineDioFramework.rest.RESTfulContentProvider;
 import com.example.OnlineDio.OnlineDioFramework.rest.ResponseHandler;
-import com.example.OnlineDio.activity.TestContentProvider;
+import com.example.OnlineDio.activity.NavigationActivity;
 import com.example.OnlineDio.model.UserProfile;
 import com.google.gson.Gson;
 import org.apache.http.HttpResponse;
@@ -45,14 +45,12 @@ public class ProfileHander implements ResponseHandler
             Log.i(TAG, " parseProfileEntity");
             UserProfile.Profile profile = null;
             DefaultHttpClient httpClient = new DefaultHttpClient();
-            //String url = "http://113.160.50.84:1009/testing/ica467/trunk/public/user-rest/" + 586;
-//            URL url1 = new URL(uri)
             HttpGet httpGet = new HttpGet(uri.toString());
             try
             {
-                if (TestContentProvider.authenTest != null)
+                if (NavigationActivity.authenProfile != null)
                 {
-                    httpGet.setHeader("Authorization", "Bearer " + TestContentProvider.authenTest);
+                    httpGet.setHeader("Authorization", "Bearer " + NavigationActivity.authenProfile);
 
 
                     HttpResponse httpResponse = httpClient.execute(httpGet);
@@ -60,10 +58,12 @@ public class ProfileHander implements ResponseHandler
                     profile = new Gson().fromJson(responseString, UserProfile.class).getData();
                     if (profile != null)
                     {
-                        mFinchVideoProvider.update(OnlineDioContract.Profile.CONTENT_URI,profile.getContentValues(),null,null);
+                        mFinchVideoProvider.insert(OnlineDioContract.Profile.CONTENT_URI, profile.getContentValues());
+
                         Log.i(TAG, profile + "");
                     }
                 }
+
             }
             catch (Exception e)
             {

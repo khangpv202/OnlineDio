@@ -2,6 +2,7 @@ package com.example.OnlineDio.accounts;
 
 import android.accounts.AccountManager;
 import android.util.Log;
+import com.example.OnlineDio.model.ProfileUpdate;
 import com.example.OnlineDio.model.UserProfile;
 import com.example.OnlineDio.provider.dao.HomeShows;
 import com.google.gson.Gson;
@@ -13,6 +14,7 @@ import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.methods.HttpPut;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicHeader;
@@ -21,6 +23,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.Serializable;
+import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -193,52 +196,103 @@ public class ParseComServer implements ServerAuthenticate
         }
         return profile;
     }
-    class DownloadProfile extends Thread{
-        private UserProfile.Profile profile;
-        private String userID;
-        private String token;
 
-        DownloadProfile(UserProfile.Profile profile,String userID,String token)
+    public static void putUserProfile(String userId, String token, ProfileUpdate profile)
+    {
+        String url = "http://192.168.1.222/testing/ica467/trunk/public/user-rest/" + userId;
+
+        DefaultHttpClient httpClient = new DefaultHttpClient();
+        HttpPut httpPut = new HttpPut(url);
+
+        for (Header header : getAppParseComHeaders())
         {
-            this.profile = profile;
-            this.userID = userID;
-            this.token = token;
+            httpPut.addHeader(header);
+        }
+        httpPut.addHeader("Content-Type", "application/json");
+        httpPut.addHeader("Authorization", "Bearer " + token);
+
+        //String user = "{\"username\":\"" + email + "\",\"password\":\"" + pass + "\",\"phone\":\"415-392-0202\"}";
+        //HttpEntity entity = new StringEntity(user);
+        //httpPost.setEntity(entity);
+        String value = new Gson().toJson(profile);
+        try
+        {
+            httpPut.setEntity(new StringEntity(value));
+        }
+        catch (UnsupportedEncodingException e)
+        {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
 
-        @Override
-        public void run()
+        try
         {
-            super.run();    //To change body of overridden methods use File | Settings | File Templates.
-
-            DefaultHttpClient httpClient = new DefaultHttpClient();
-            String url = "http://113.160.50.84:1009/testing/ica467/trunk/public/user-rest/" + userID;
-            HttpGet httpGet = new HttpGet(url);
-
-            for (Header header : getAppParseComHeaders())
+            HttpResponse response = httpClient.execute(httpPut);
+            String responseString = EntityUtils.toString(response.getEntity());
+            Log.i("UpdateProfile", responseString + "");
+            if (response.getStatusLine().getStatusCode() != 201)
             {
-                httpGet.addHeader(header);
+                ParseComError error = new Gson().fromJson(responseString, ParseComError.class);
+                throw new Exception("Error creating user[" + error.code + "] - " + error.error);
             }
-            httpGet.setHeader("Authorization", "Bearer " + token);
 
 
-            try
-            {
-                HttpResponse httpResponse = httpClient.execute(httpGet);
-                String responseString = EntityUtils.toString(httpResponse.getEntity());
-                profile = new Gson().fromJson(responseString, UserProfile.class).getData();
-                if (profile != null)
-                {
-                    //return profile;
-                    Log.i(TAG, profile + "");
-                }
-
-            }
-            catch (Exception e)
-            {
-                e.printStackTrace();
-            }
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
     }
+
+    /* class DownloadProfile extends Thread{
+         private UserProfile.Profile profile;
+         private String userID;
+         private String token;
+
+         DownloadProfile(UserProfile.Profile profile,String userID,String token)
+         {
+             this.profile = profile;
+             this.userID = userID;
+             this.token = token;
+         }
+
+         @Override
+         public void run()
+         {
+             super.run();    //To change body of overridden methods use File | Settings | File Templates.
+
+             DefaultHttpClient httpClient = new DefaultHttpClient();
+             String url = "http://113.160.50.84:1009/testing/ica467/trunk/public/user-rest/" + userID;
+             HttpGet httpGet = new HttpGet(url);
+
+             for (Header header : getAppParseComHeaders())
+             {
+                 httpGet.addHeader(header);
+             }
+             httpGet.setHeader("Authorization", "Bearer " + token);
+
+
+             try
+             {
+                 HttpResponse httpResponse = httpClient.execute(httpGet);
+                 String responseString = EntityUtils.toString(httpResponse.getEntity());
+                 profile = new Gson().fromJson(responseString, UserProfile.class).getData();
+                 if (profile != null)
+                 {
+                     //return profile;
+                     Log.i(TAG, profile + "");
+                 }
+
+             }
+             catch (Exception e)
+             {
+                 e.printStackTrace();
+             }
+         }
+     }*/
     public static class ParseComError implements Serializable
     {
         public int code;
