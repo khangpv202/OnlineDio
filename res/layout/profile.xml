@@ -307,14 +307,14 @@
                                 android:button="@null"
                                 android:background="@drawable/custome_radiobutton_female"
                                 android:checked="true"
-                                android:id="@+id/genderMale"
+                                android:id="@+id/profile_rbGenderMale"
                                 />
                         <RadioButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:background="@drawable/custom_radiobutton_male"
                                 android:button="@null"
-                                android:id="@+id/genderFemale" android:checked="false"/>
+                                android:id="@+id/profile_rbGenderFemale" android:checked="false"/>
                     </RadioGroup>
                     <Spinner
                             android:layout_width="wrap_content"

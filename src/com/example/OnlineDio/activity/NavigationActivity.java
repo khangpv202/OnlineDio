@@ -97,6 +97,7 @@ public class NavigationActivity extends FragmentActivity
             }
         });
         refreshAuthenTokenAndLoadProfile();
+//        Cursor c = managedQuery(OnlineDioContract.Profile.CONTENT_URI, null, "586", null, null);
     }
 
     private void refreshAuthenTokenAndLoadProfile()
@@ -150,7 +151,6 @@ public class NavigationActivity extends FragmentActivity
             {
                 super.onPostExecute(intent);
                 String token = intent.getStringExtra(AccountManager.KEY_AUTHTOKEN);
-//                authenTest = token;
                 String userID = intent.getStringExtra("USER_ID");
                 Cursor c = managedQuery(OnlineDioContract.Profile.CONTENT_URI, null, userID, null, null);
             }

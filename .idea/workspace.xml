@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidConfiguredLogFilters">
+    <filters>
+      <filter>
+        <option name="logLevel" value="verbose" />
+        <option name="logMessagePattern" value="" />
+        <option name="logTagPattern" value="ParseComServer" />
+        <option name="name" value="ParseComServer" />
+        <option name="pid" value="" />
+      </filter>
+    </filters>
+  </component>
   <component name="AndroidDesignerProfile">
     <option name="fullProfile">
       <profile>
         <option name="device" value="4.65in 720p (Galaxy Nexus)" />
         <option name="deviceConfiguration" value="Portrait" />
+        <option name="localeLanguage" value="sv" />
         <option name="targetHashString" value="android-10" />
         <option name="theme" value="Theme" />
       </profile>
@@ -23,19 +35,16 @@
       </GlobalState>
     </option>
   </component>
-  <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="WARN" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="03a71fb1-6ed9-4ee5-985e-409887dd835e" name="Default" comment="" />
     <list id="6b9a0844-5eac-4903-8f82-5f888c8f04b4" name="New changelist" comment="" />
     <ignored path="OnlineDio.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/fragment.java" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383726606006" ignored="false" />
-    <file path="/Dummy.txt" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383725753405" ignored="false" />
+    <file path="/fragment.java" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383812338959" ignored="false" />
+    <file path="/Dummy.txt" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383797842473" ignored="false" />
     <file path="/MyActivity.java" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1381741527634" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383666768148" ignored="false" />
-    <file path="/a.dummy" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383730544610" ignored="false" />
+    <file path="/a.dummy" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383811013919" ignored="false" />
     <file path="/navigation.xml" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1381820426551" ignored="false" />
     <file path="/NavigationActivity.java" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383705005233" ignored="false" />
     <file path="/FavoriteFragment.java" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1381745729858" ignored="false" />
@@ -72,23 +81,24 @@
     <file path="/strings.xml" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1381820703512" ignored="false" />
     <file path="/LauchActivity.java" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383709033188" ignored="false" />
     <file path="/custom_navigation_edtsearch.xml" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1381811957348" ignored="false" />
-    <file path="/HomeFragment.java" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383644238927" ignored="false" />
-    <file path="/ParseComServer.java" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383721048299" ignored="false" />
+    <file path="/HomeFragment.java" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383811049905" ignored="false" />
+    <file path="/ParseComServer.java" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383799325445" ignored="false" />
     <file path="/TestContentProvider.java" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383664083287" ignored="false" />
     <file path="$PROJECT_DIR$/../../ProgrammingAndroidExamples-master/FinchVideo/AndroidManifest.xml" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383579318255" ignored="false" />
     <file path="/ProfileHander.java" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383708626357" ignored="false" />
-    <file path="/OnlineDioContentProvider.java" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383730792758" ignored="false" />
+    <file path="/OnlineDioContentProvider.java" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383812040875" ignored="false" />
     <file path="/FinchVideoContentProvider.java" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383581571618" ignored="false" />
     <file path="$PROJECT_DIR$/../../ProgrammingAndroidExamples-master/FinchVideo/src/com/oreilly/demo/android/pa/finchvideo/provider/FinchVideoContentProvider.java" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383581925504" ignored="false" />
     <file path="/RESTfulContentProvider.java" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383584218016" ignored="false" />
     <file path="/UserProfile.java" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383727188377" ignored="false" />
-    <file path="/LoginActivity.java" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383647541084" ignored="false" />
-    <file path="/OnlineDioContract.java" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383627366955" ignored="false" />
+    <file path="/LoginActivity.java" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383799568748" ignored="false" />
+    <file path="/OnlineDioContract.java" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383798284692" ignored="false" />
     <file path="/DownloadImageTask.java" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383647031305" ignored="false" />
-    <file path="/ProfileActivity.java" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383733609676" ignored="false" />
+    <file path="/ProfileActivity.java" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383798364745" ignored="false" />
     <file path="/profile2.xml" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383722744036" ignored="false" />
     <file path="/ProfileUpdate.java" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383720687681" ignored="false" />
     <file path="/array.xml" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383723243352" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../mr phuong/SoundService/src/com/phuong/soundservice/FeedFragment.java" changelist="03a71fb1-6ed9-4ee5-985e-409887dd835e" time="1383809350583" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +113,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <method_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/OnlineDioFramework/rest/RESTfulContentProvider.java" line="85" class="com.example.OnlineDio.OnlineDioFramework.rest.RESTfulContentProvider" package="com.example.OnlineDio.OnlineDioFramework.rest">
         <option name="WATCH_ENTRY" value="true" />
@@ -155,23 +166,6 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/TestContentProvider.java" line="255" class="com.example.OnlineDio.activity.TestContentProvider" package="com.example.OnlineDio.activity">
-        <option name="WATCH_ENTRY" value="true" />
-        <option name="WATCH_EXIT" value="true" />
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/LoginActivity.java" line="252" class="com.example.OnlineDio.activity.LoginActivity" package="com.example.OnlineDio.activity">
         <option name="WATCH_ENTRY" value="true" />
         <option name="WATCH_EXIT" value="true" />
@@ -206,7 +200,58 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" line="199" class="com.example.OnlineDio.accounts.ParseComServer" package="com.example.OnlineDio.accounts">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" line="214" class="com.example.OnlineDio.accounts.ParseComServer" package="com.example.OnlineDio.accounts">
+        <option name="WATCH_ENTRY" value="true" />
+        <option name="WATCH_EXIT" value="true" />
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" line="133" class="com.example.OnlineDio.accounts.ParseComServer" package="com.example.OnlineDio.accounts">
+        <option name="WATCH_ENTRY" value="true" />
+        <option name="WATCH_EXIT" value="true" />
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/LoginActivity.java" line="318" class="com.example.OnlineDio.activity.LoginActivity" package="com.example.OnlineDio.activity">
+        <option name="WATCH_ENTRY" value="true" />
+        <option name="WATCH_EXIT" value="true" />
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/LauchActivity.java" line="56" class="com.example.OnlineDio.activity.LauchActivity" package="com.example.OnlineDio.activity">
         <option name="WATCH_ENTRY" value="true" />
         <option name="WATCH_EXIT" value="true" />
         <option name="ENABLED" value="true" />
@@ -224,7 +269,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </method_breakpoints>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -262,7 +306,7 @@
       </breakpoint>
     </breakpoint_any>
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/TestContentProvider.java" line="62" class="com.example.OnlineDio.activity.TestContentProvider" package="com.example.OnlineDio.activity">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/TestContentProvider.java" line="65" class="TestContentProvider.java" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -277,7 +321,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/TestContentProvider.java" line="215" class="com.example.OnlineDio.activity.TestContentProvider$7" package="com.example.OnlineDio.activity">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/TestContentProvider.java" line="218" class="TestContentProvider.java" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -292,7 +336,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/TestContentProvider.java" line="358" class="com.example.OnlineDio.activity.TestContentProvider$11" package="com.example.OnlineDio.activity">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/TestContentProvider.java" line="363" class="TestContentProvider.java" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -307,7 +351,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/TestContentProvider.java" line="326" class="com.example.OnlineDio.activity.TestContentProvider$11" package="com.example.OnlineDio.activity">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/TestContentProvider.java" line="331" class="TestContentProvider.java" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -322,7 +366,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" line="167" class="com.example.OnlineDio.accounts.ParseComServer" package="com.example.OnlineDio.accounts">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" line="182" class="com.example.OnlineDio.accounts.ParseComServer" package="com.example.OnlineDio.accounts">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -337,7 +381,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" line="196" class="com.example.OnlineDio.accounts.ParseComServer" package="com.example.OnlineDio.accounts">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" line="211" class="com.example.OnlineDio.accounts.ParseComServer" package="com.example.OnlineDio.accounts">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -352,7 +396,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" line="188" class="com.example.OnlineDio.accounts.ParseComServer" package="com.example.OnlineDio.accounts">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" line="203" class="com.example.OnlineDio.accounts.ParseComServer" package="com.example.OnlineDio.accounts">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -367,7 +411,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" line="183" class="com.example.OnlineDio.accounts.ParseComServer" package="com.example.OnlineDio.accounts">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" line="198" class="com.example.OnlineDio.accounts.ParseComServer" package="com.example.OnlineDio.accounts">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -382,7 +426,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" line="184" class="com.example.OnlineDio.accounts.ParseComServer" package="com.example.OnlineDio.accounts">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" line="199" class="com.example.OnlineDio.accounts.ParseComServer" package="com.example.OnlineDio.accounts">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -577,7 +621,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/TestContentProvider.java" line="123" class="com.example.OnlineDio.activity.TestContentProvider$3" package="com.example.OnlineDio.activity">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/TestContentProvider.java" line="126" class="TestContentProvider.java" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -592,7 +636,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/TestContentProvider.java" line="125" class="com.example.OnlineDio.activity.TestContentProvider$3" package="com.example.OnlineDio.activity">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/TestContentProvider.java" line="128" class="TestContentProvider.java" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -727,7 +771,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/TestContentProvider.java" line="243" class="com.example.OnlineDio.activity.TestContentProvider$9" package="com.example.OnlineDio.activity">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/TestContentProvider.java" line="248" class="TestContentProvider.java" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -742,7 +786,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/TestContentProvider.java" line="235" class="com.example.OnlineDio.activity.TestContentProvider" package="com.example.OnlineDio.activity">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/TestContentProvider.java" line="238" class="TestContentProvider.java" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -757,7 +801,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/TestContentProvider.java" line="241" class="com.example.OnlineDio.activity.TestContentProvider$9" package="com.example.OnlineDio.activity">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/TestContentProvider.java" line="244" class="TestContentProvider.java" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -772,7 +816,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/provider/OnlineDioContentProvider.java" line="206" class="com.example.OnlineDio.provider.OnlineDioContentProvider" package="com.example.OnlineDio.provider">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/provider/OnlineDioContentProvider.java" line="217" class="com.example.OnlineDio.provider.OnlineDioContentProvider" package="com.example.OnlineDio.provider">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -787,7 +831,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/provider/OnlineDioContentProvider.java" line="204" class="com.example.OnlineDio.provider.OnlineDioContentProvider" package="com.example.OnlineDio.provider">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/provider/OnlineDioContentProvider.java" line="215" class="com.example.OnlineDio.provider.OnlineDioContentProvider" package="com.example.OnlineDio.provider">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -907,7 +951,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" line="101" class="com.example.OnlineDio.accounts.ParseComServer" package="com.example.OnlineDio.accounts">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" line="104" class="com.example.OnlineDio.accounts.ParseComServer" package="com.example.OnlineDio.accounts">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -922,7 +966,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" line="124" class="com.example.OnlineDio.accounts.ParseComServer" package="com.example.OnlineDio.accounts">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" line="130" class="com.example.OnlineDio.accounts.ParseComServer" package="com.example.OnlineDio.accounts">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -937,7 +981,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/provider/OnlineDioContentProvider.java" line="218" class="com.example.OnlineDio.provider.OnlineDioContentProvider" package="com.example.OnlineDio.provider">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/provider/OnlineDioContentProvider.java" line="229" class="com.example.OnlineDio.provider.OnlineDioContentProvider" package="com.example.OnlineDio.provider">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -967,21 +1011,6 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/LoginActivity.java" line="272" class="com.example.OnlineDio.activity.LoginActivity$5" package="com.example.OnlineDio.activity">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/LoginActivity.java" line="275" class="com.example.OnlineDio.activity.LoginActivity$5" package="com.example.OnlineDio.activity">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
@@ -997,7 +1026,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/TestContentProvider.java" line="260" class="com.example.OnlineDio.activity.TestContentProvider" package="com.example.OnlineDio.activity">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/TestContentProvider.java" line="265" class="TestContentProvider.java" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -1012,7 +1041,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/TestContentProvider.java" line="269" class="com.example.OnlineDio.activity.TestContentProvider$10" package="com.example.OnlineDio.activity">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/TestContentProvider.java" line="274" class="TestContentProvider.java" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -1057,7 +1086,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/TestContentProvider.java" line="303" class="com.example.OnlineDio.activity.TestContentProvider$10" package="com.example.OnlineDio.activity">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/TestContentProvider.java" line="308" class="TestContentProvider.java" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -1072,7 +1101,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/TestContentProvider.java" line="306" class="com.example.OnlineDio.activity.TestContentProvider$10" package="com.example.OnlineDio.activity">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/TestContentProvider.java" line="311" class="TestContentProvider.java" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -1132,7 +1161,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/ProfileActivity.java" line="135" class="com.example.OnlineDio.activity.ProfileActivity" package="com.example.OnlineDio.activity">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/ProfileActivity.java" line="102" class="com.example.OnlineDio.activity.ProfileActivity" package="com.example.OnlineDio.activity">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -1192,37 +1221,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/ProfileActivity.java" line="89" class="com.example.OnlineDio.activity.ProfileActivity" package="com.example.OnlineDio.activity">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/ProfileActivity.java" line="136" class="com.example.OnlineDio.activity.ProfileActivity" package="com.example.OnlineDio.activity">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/LauchActivity.java" line="74" class="com.example.OnlineDio.activity.LauchActivity$2" package="com.example.OnlineDio.activity">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/ProfileActivity.java" line="90" class="com.example.OnlineDio.activity.ProfileActivity" package="com.example.OnlineDio.activity">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -1252,7 +1251,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/ProfileActivity.java" line="151" class="com.example.OnlineDio.activity.ProfileActivity" package="com.example.OnlineDio.activity">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/ProfileActivity.java" line="573" class="com.example.OnlineDio.activity.ProfileActivity$13$1" package="com.example.OnlineDio.activity">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -1267,7 +1266,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/ProfileActivity.java" line="552" class="com.example.OnlineDio.activity.ProfileActivity$13$1" package="com.example.OnlineDio.activity">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/ProfileActivity.java" line="528" class="com.example.OnlineDio.activity.ProfileActivity" package="com.example.OnlineDio.activity">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -1282,7 +1281,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/ProfileActivity.java" line="506" class="com.example.OnlineDio.activity.ProfileActivity" package="com.example.OnlineDio.activity">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" line="218" class="com.example.OnlineDio.accounts.ParseComServer" package="com.example.OnlineDio.accounts">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -1297,7 +1296,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" line="203" class="com.example.OnlineDio.accounts.ParseComServer" package="com.example.OnlineDio.accounts">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" line="245" class="com.example.OnlineDio.accounts.ParseComServer" package="com.example.OnlineDio.accounts">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -1312,7 +1311,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" line="229" class="com.example.OnlineDio.accounts.ParseComServer" package="com.example.OnlineDio.accounts">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" line="244" class="com.example.OnlineDio.accounts.ParseComServer" package="com.example.OnlineDio.accounts">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -1327,7 +1326,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" line="228" class="com.example.OnlineDio.accounts.ParseComServer" package="com.example.OnlineDio.accounts">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" line="258" class="com.example.OnlineDio.accounts.ParseComServer" package="com.example.OnlineDio.accounts">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -1342,7 +1341,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" line="231" class="com.example.OnlineDio.accounts.ParseComServer" package="com.example.OnlineDio.accounts">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/ProfileActivity.java" line="563" class="com.example.OnlineDio.activity.ProfileActivity$13" package="com.example.OnlineDio.activity">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -1357,7 +1356,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/ProfileActivity.java" line="542" class="com.example.OnlineDio.activity.ProfileActivity$13" package="com.example.OnlineDio.activity">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/provider/OnlineDioContentProvider.java" line="250" class="com.example.OnlineDio.provider.OnlineDioContentProvider" package="com.example.OnlineDio.provider">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -1372,7 +1371,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/ProfileActivity.java" line="540" class="com.example.OnlineDio.activity.ProfileActivity$13" package="com.example.OnlineDio.activity">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/ProfileActivity.java" line="557" class="com.example.OnlineDio.activity.ProfileActivity$13" package="com.example.OnlineDio.activity">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -1402,7 +1401,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/ProfileActivity.java" line="535" class="com.example.OnlineDio.activity.ProfileActivity$13" package="com.example.OnlineDio.activity">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" line="151" class="com.example.OnlineDio.accounts.ParseComServer" package="com.example.OnlineDio.accounts">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -1417,7 +1416,217 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/provider/OnlineDioContentProvider.java" line="228" class="com.example.OnlineDio.provider.OnlineDioContentProvider" package="com.example.OnlineDio.provider">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" line="144" class="com.example.OnlineDio.accounts.ParseComServer" package="com.example.OnlineDio.accounts">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" line="136" class="com.example.OnlineDio.accounts.ParseComServer" package="com.example.OnlineDio.accounts">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/LoginActivity.java" line="335" class="com.example.OnlineDio.activity.LoginActivity" package="com.example.OnlineDio.activity">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/LauchActivity.java" line="58" class="com.example.OnlineDio.activity.LauchActivity" package="com.example.OnlineDio.activity">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/LauchActivity.java" line="74" class="com.example.OnlineDio.activity.LauchActivity$2" package="com.example.OnlineDio.activity">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/syncadapter/OnlineSyncAdapter.java" line="39" class="com.example.OnlineDio.syncadapter.OnlineSyncAdapter" package="com.example.OnlineDio.syncadapter">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" line="148" class="com.example.OnlineDio.accounts.ParseComServer" package="com.example.OnlineDio.accounts">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/NavigationActivity.java" line="154" class="com.example.OnlineDio.activity.NavigationActivity$3" package="com.example.OnlineDio.activity">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/NavigationActivity.java" line="149" class="com.example.OnlineDio.activity.NavigationActivity$3" package="com.example.OnlineDio.activity">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/NavigationActivity.java" line="98" class="com.example.OnlineDio.activity.NavigationActivity" package="com.example.OnlineDio.activity">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/provider/OnlineDioContentProvider.java" line="81" class="com.example.OnlineDio.provider.OnlineDioContentProvider" package="com.example.OnlineDio.provider">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/LoginActivity.java" line="272" class="com.example.OnlineDio.activity.LoginActivity$5" package="com.example.OnlineDio.activity">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" line="123" class="com.example.OnlineDio.accounts.ParseComServer" package="com.example.OnlineDio.accounts">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" line="127" class="com.example.OnlineDio.accounts.ParseComServer" package="com.example.OnlineDio.accounts">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/OnlineDio/fragment/HomeFragment.java" line="113" class="com.example.OnlineDio.fragment.HomeFragment" package="com.example.OnlineDio.fragment">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -1445,87 +1654,89 @@
       <file leaf-file-name="OnlineDioContentProvider.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/OnlineDio/provider/OnlineDioContentProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="105" column="32" selection-start="3746" selection-end="3746" vertical-scroll-proportion="0.0">
+            <state line="193" column="98" selection-start="6851" selection-end="6851" vertical-scroll-proportion="0.0">
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LauchActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/LauchActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="84" column="65" selection-start="3366" selection-end="3366" vertical-scroll-proportion="0.6673228">
+              <folding>
+                <element signature="e#1433#1809#0" expanded="true" />
+                <element signature="e#1798#1799#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="View.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://D:/qsoft/adt-bundle-windows-x86-20130917/sdk/platforms/android-18/android.jar!/android/view/View.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="949" column="19" selection-start="42350" selection-end="42350" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParseComServer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="127" column="0" selection-start="4291" selection-end="4291" vertical-scroll-proportion="-6.44">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/login.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="70" column="64" selection-start="4358" selection-end="4358" vertical-scroll-proportion="-4.48">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomeFragment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/OnlineDio/fragment/HomeFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="180" column="44" selection-start="6550" selection-end="6550" vertical-scroll-proportion="-6.2">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2983#3670#0" expanded="true" />
+                <element signature="e#3659#3660#0" expanded="true" />
+                <element signature="e#5990#8734#0" expanded="true" />
+                <element signature="e#8719#8720#0" expanded="true" />
+                <element signature="e#9447#9952#0" expanded="true" />
+                <element signature="e#9945#9946#0" expanded="true" />
+                <element signature="e#10008#10165#0" expanded="true" />
+                <element signature="e#10158#10159#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/home.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="60" column="40" selection-start="2999" selection-end="3010" vertical-scroll-proportion="-2.92">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="NavigationActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/NavigationActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="8" selection-start="3904" selection-end="3904" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestContentProvider.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/TestContentProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="312" column="17" selection-start="12437" selection-end="12437" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OnlineSyncAdapter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/OnlineDio/syncadapter/OnlineSyncAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="101" selection-start="2762" selection-end="2762" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1998#2018#0" expanded="true" />
-                <element signature="e#2528#2548#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResponseHandler.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/OnlineDio/OnlineDioFramework/rest/ResponseHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="17" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UriRequestTask.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/OnlineDio/OnlineDioFramework/rest/UriRequestTask.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="27" selection-start="666" selection-end="680" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RESTfulContentProvider.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/OnlineDio/OnlineDioFramework/rest/RESTfulContentProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="16" selection-start="2828" selection-end="2828" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#917#941#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProfileActivity.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/ProfileActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="518" column="79" selection-start="17245" selection-end="17245" vertical-scroll-proportion="0.34615386">
-              <folding>
-                <element signature="class#7740:8692" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileHandler.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/OnlineDio/OnlineDioFramework/rest/FileHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="65" selection-start="923" selection-end="923" vertical-scroll-proportion="0.0">
+            <state line="154" column="100" selection-start="6777" selection-end="6777" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -1549,22 +1760,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/example/OnlineDio/util/DownloadImageTask.java" />
-        <option value="$PROJECT_DIR$/src/com/example/OnlineDio/activity/LoginActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/example/OnlineDio/activity/TestContentProvider.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/OnlineDio/activity/LauchActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/example/OnlineDio/activity/NavigationActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/example/OnlineDio/provider/ProfileHander.java" />
         <option value="$PROJECT_DIR$/src/com/example/OnlineDio/model/ProfileUpdate.java" />
-        <option value="$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" />
         <option value="$PROJECT_DIR$/res/values/array.xml" />
         <option value="$PROJECT_DIR$/res/layout/profile2.xml" />
         <option value="$PROJECT_DIR$/src/com/example/OnlineDio/model/UserProfile.java" />
+        <option value="$PROJECT_DIR$/src/com/example/OnlineDio/syncadapter/OnlineSyncAdapter.java" />
+        <option value="$PROJECT_DIR$/src/com/example/OnlineDio/activity/TestContentProvider.java" />
+        <option value="$PROJECT_DIR$/src/com/example/OnlineDio/activity/HomeActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/example/OnlineDio/activity/NavigationActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/example/OnlineDio/provider/OnlineDioContract.java" />
+        <option value="$PROJECT_DIR$/src/com/example/OnlineDio/activity/ProfileActivity.java" />
+        <option value="$PROJECT_DIR$/res/layout/login.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java" />
+        <option value="$PROJECT_DIR$/src/com/example/OnlineDio/activity/LoginActivity.java" />
+        <option value="$PROJECT_DIR$/res/layout/home.xml" />
         <option value="$PROJECT_DIR$/src/com/example/OnlineDio/fragment/HomeFragment.java" />
         <option value="$PROJECT_DIR$/src/com/example/OnlineDio/provider/OnlineDioContentProvider.java" />
-        <option value="$PROJECT_DIR$/src/com/example/OnlineDio/syncadapter/OnlineSyncAdapter.java" />
-        <option value="$PROJECT_DIR$/src/com/example/OnlineDio/activity/ProfileActivity.java" />
       </list>
     </option>
   </component>
@@ -1607,6 +1818,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1617,6 +1829,12 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="External Libraries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineDio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1709,6 +1927,54 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="provider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineDio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineDio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineDio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="provider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineDio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineDio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineDio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="OnlineDioFramework" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1736,6 +2002,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="rest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineDio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineDio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineDio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1788,15 +2076,108 @@
               <option name="myItemId" value="OnlineDio" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineDio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineDio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineDio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineDio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineDio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineDio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineDio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineDio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineDio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineDio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnlineDio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android-query-full.0.26.2-beta.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
@@ -1804,7 +2185,7 @@
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="D:/qsoft/adt-bundle-windows-x86-20130917/sdk/extras/android/support/v4/android-support-v4.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pulltorefresh" />
     <property name="AndroidLayoutSelectedEditor" value="text-editor" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="Q-Smart S22" />
@@ -1830,14 +2211,15 @@
       <recent name="F:\Android\Android Qsoft\MyAndroidTeam\OnlineDio\res\drawable-hdpi" />
       <recent name="F:\Android\Android Qsoft\MyAndroidTeam\OnlineDio\res\layout" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\Android\Android Qsoft\MyAndroidTeam\OnlineDio\res\values" />
-      <recent name="F:\Android\Android Qsoft\MyAndroidTeam\OnlineDio\src\com\example\OnlineDio" />
-      <recent name="F:\Android\Android Qsoft\MyAndroidTeam\OnlineDio\src\com\example\OnlineDio\Adapter" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.OnlineDio" />
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kpv\Desktop\android_example\project\OnlineDio\libs" />
+      <recent name="F:\Android\Android Qsoft\MyAndroidTeam\OnlineDio\res\values" />
+      <recent name="F:\Android\Android Qsoft\MyAndroidTeam\OnlineDio\src\com\example\OnlineDio" />
+      <recent name="F:\Android\Android Qsoft\MyAndroidTeam\OnlineDio\src\com\example\OnlineDio\Adapter" />
     </key>
   </component>
   <component name="RunManager" selected="Android Application.OnlineDio">
@@ -2062,33 +2444,33 @@
     <frame x="-8" y="-8" width="1616" height="916" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12934363" sideWeight="0.5256917" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23101673" sideWeight="0.5256917" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12934363" sideWeight="0.47826087" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23101673" sideWeight="0.47826087" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32806325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.5256917" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952815" sideWeight="0.6729452" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287879" sideWeight="0.6953748" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952815" sideWeight="0.6729452" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32806325" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4743083" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.5256917" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2964427" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="16" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23423423" sideWeight="0.29776022" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23423423" sideWeight="0.29776022" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32674572" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32279316" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5217391" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32806325" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24961948" sideWeight="0.6299841" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24961948" sideWeight="0.6299841" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23423423" sideWeight="0.6943346" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30566534" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22844273" sideWeight="0.7035573" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3030303" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Sonar" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.002283105" sideWeight="0.6729452" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.002283105" sideWeight="0.6729452" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="IvyIDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -2166,54 +2548,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/layout/profile2.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/com/example/OnlineDio/OnlineDioFramework/rest/RESTfulContentProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="292" column="62" selection-start="17988" selection-end="18005" vertical-scroll-proportion="-3.3066666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/qsoft/adt-bundle-windows-x86-20130917/sdk/platforms/android-18/android.jar!/android/content/ContentProvider.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/qsoft/adt-bundle-windows-x86-20130917/sdk/platforms/android-18/android.jar!/android/content/ContentResolver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="21" selection-start="4257" selection-end="4257" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/OnlineDio/fragment/HomeFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="163" column="5" selection-start="6792" selection-end="7014" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="36" selection-start="4274" selection-end="4274" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/NavigationActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="8" selection-start="3904" selection-end="3904" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/TestContentProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="312" column="17" selection-start="12437" selection-end="12437" vertical-scroll-proportion="0.0">
+        <state line="89" column="33" selection-start="2919" selection-end="2919" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -2225,68 +2562,127 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/OnlineDio/syncadapter/OnlineSyncAdapter.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/OnlineDioAuthenticator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="101" selection-start="2762" selection-end="2762" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1998#2018#0" expanded="true" />
-            <element signature="e#2528#2548#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/OnlineDio/provider/OnlineDioContentProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="32" selection-start="3746" selection-end="3746" vertical-scroll-proportion="0.0">
+        <state line="81" column="67" selection-start="3045" selection-end="3045" vertical-scroll-proportion="0.33264464">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/OnlineDio/OnlineDioFramework/rest/RESTfulContentProvider.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ServerAuthenticate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="16" selection-start="2828" selection-end="2828" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#917#941#0" expanded="true" />
-          </folding>
+        <state line="16" column="16" selection-start="392" selection-end="392" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/qsoft/adt-bundle-windows-x86-20130917/sdk/platforms/android-18/android.jar!/org/apache/http/impl/client/AbstractHttpClient.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="46" selection-start="7071" selection-end="7071" vertical-scroll-proportion="0.33333334">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="271" column="23" selection-start="9328" selection-end="9328" vertical-scroll-proportion="0.32119915">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/OnlineDio/OnlineDioFramework/rest/FileHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="65" selection-start="923" selection-end="923" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/OnlineDio/provider/ProfileHander.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="16" selection-start="1154" selection-end="1154" vertical-scroll-proportion="-0.07083333">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/OnlineDio/OnlineDioFramework/rest/ResponseHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="17" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0">
+        <state line="298" column="64" selection-start="11063" selection-end="11063" vertical-scroll-proportion="6.0763984">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/ProfileActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="518" column="79" selection-start="17245" selection-end="17245" vertical-scroll-proportion="0.34615386">
+        <state line="142" column="80" selection-start="4576" selection-end="4576" vertical-scroll-proportion="0.33898306">
           <folding>
-            <element signature="class#7740:8692" expanded="false" />
+            <element signature="method#setActionForComponents#0;class#ProfileActivity#0" expanded="false" />
+            <element signature="method#findByIdComponents#0;class#ProfileActivity#0" expanded="false" />
+            <element signature="method#findPositionOfCountry#0;class#ProfileActivity#0" expanded="false" />
+            <element signature="class#8119:9071" expanded="false" />
+            <element signature="method#onActivityResult#0;class#ProfileActivity#0" expanded="false" />
+            <element signature="method#doCrop#0;class#ProfileActivity#0" expanded="false" />
+            <element signature="e#15696#15845#0" expanded="true" />
+            <element signature="e#15838#15839#0" expanded="true" />
+            <element signature="e#17206#19597#0" expanded="true" />
+            <element signature="e#19590#19591#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/OnlineDio/accounts/ParseComServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="0" selection-start="4291" selection-end="4291" vertical-scroll-proportion="-6.44">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/qsoft/adt-bundle-windows-x86-20130917/sdk/platforms/android-18/android.jar!/android/app/LoaderManager.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="28" selection-start="936" selection-end="936" vertical-scroll-proportion="0.4722222">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/qsoft/adt-bundle-windows-x86-20130917/sdk/extras/android/support/v4/android-support-v4.jar!/android/support/v4/app/LoaderManager.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="43" selection-start="1066" selection-end="1081" vertical-scroll-proportion="-14.96">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/home.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="40" selection-start="2999" selection-end="3010" vertical-scroll-proportion="-2.92">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../JakeWharton-ActionBarSherlock-5a15d92/actionbarsherlock/src/com/actionbarsherlock/internal/view/menu/ActionMenuItemView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="266" column="30" selection-start="8549" selection-end="8549" vertical-scroll-proportion="0.33264464">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/OnlineDio/fragment/HomeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="180" column="44" selection-start="6550" selection-end="6550" vertical-scroll-proportion="-6.2">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2983#3670#0" expanded="true" />
+            <element signature="e#3659#3660#0" expanded="true" />
+            <element signature="e#5990#8734#0" expanded="true" />
+            <element signature="e#8719#8720#0" expanded="true" />
+            <element signature="e#9447#9952#0" expanded="true" />
+            <element signature="e#9945#9946#0" expanded="true" />
+            <element signature="e#10008#10165#0" expanded="true" />
+            <element signature="e#10158#10159#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/OnlineDio/provider/OnlineDioContentProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="193" column="98" selection-start="6851" selection-end="6851" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/qsoft/adt-bundle-windows-x86-20130917/sdk/platforms/android-18/android.jar!/android/view/View.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="949" column="19" selection-start="42350" selection-end="42350" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/OnlineDio/activity/LauchActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="65" selection-start="3366" selection-end="3366" vertical-scroll-proportion="0.6673228">
+          <folding>
+            <element signature="e#1433#1809#0" expanded="true" />
+            <element signature="e#1798#1799#0" expanded="true" />
           </folding>
         </state>
       </provider>

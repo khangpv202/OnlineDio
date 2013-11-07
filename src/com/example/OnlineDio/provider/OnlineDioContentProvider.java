@@ -190,6 +190,17 @@ public class OnlineDioContentProvider extends RESTfulContentProvider
                 }
                 rowsDeleted = db.delete(OnlineDioContract.Home.TABLE_NAME, tvShowIdWhereClause, selectionArgs);
                 break;
+            case (PROFILE_INFOR):
+                rowsDeleted = db.delete(OnlineDioContract.Profile.TABLE_NAME, selection, selectionArgs);
+                break;
+            case (PROFILE_INFORS):
+                tvShowIdWhereClause = OnlineDioContract.Profile._ID + "=" + uri.getLastPathSegment();
+                if (!TextUtils.isEmpty(selection))
+                {
+                    tvShowIdWhereClause += " AND " + selection;
+                }
+                rowsDeleted = db.delete(OnlineDioContract.Profile.TABLE_NAME, tvShowIdWhereClause, selectionArgs);
+                break;
             default:
                 throw new IllegalArgumentException("Unsupported URI: " + uri);
         }

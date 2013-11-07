@@ -70,7 +70,7 @@
                       android:id="@+id/login_et_Pass" android:layout_gravity="left|center_vertical"
                       android:layout_weight="1"
                       android:password="true"
-                      android:text="123456"
+                      android:text="1234567"
                       android:drawablePadding="5dp"
                       android:layout_marginLeft="10dp" android:layout_marginRight="5dp"
                       android:hint="@string/login_edtPasswordHint" android:singleLine="true" android:textSize="16sp"/>

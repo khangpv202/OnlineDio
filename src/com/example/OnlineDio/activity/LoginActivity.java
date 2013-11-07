@@ -271,7 +271,7 @@ public class LoginActivity extends AccountAuthenticatorActivity
                 try
                 {    //todo: when enter account wrong, what happen
                     User user = AccountGeneral.sServerAuthenticate.userSignIn(userName, StreamUtils.convertToMd5(userPass), mAuthTokenType);
-                    if (user != null)
+                    if (user.getUser_id()!=null)
                     {
                         userID = user.getUser_id();
                         data.putString(AccountManager.KEY_ACCOUNT_NAME, userName);
@@ -306,7 +306,7 @@ public class LoginActivity extends AccountAuthenticatorActivity
             {
                 if (intent.hasExtra(KEY_ERROR_MESSAGE))
                 {
-                    Toast.makeText(getBaseContext(), intent.getStringExtra(KEY_ERROR_MESSAGE), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getBaseContext(),"Invalid username and password combination", Toast.LENGTH_SHORT).show();
                 }
                 else
                 {
@@ -314,8 +314,6 @@ public class LoginActivity extends AccountAuthenticatorActivity
                 }
             }
         }.execute();
-
-
     }
 
     private void finishLogin(Intent intent)
@@ -336,8 +334,6 @@ public class LoginActivity extends AccountAuthenticatorActivity
             // (Not setting the auth token will cause another call to the server to authenticate the user)
             mAccountManager.addAccountExplicitly(account, accountPassword, intent.getBundleExtra(AccountManager.KEY_USERDATA));
             mAccountManager.setAuthToken(account, authtokenType, authtoken);
-
-//            mAccountManager.getAuthTokenByFeatures()
         }
         else
         {
@@ -347,9 +343,9 @@ public class LoginActivity extends AccountAuthenticatorActivity
 
         setAccountAuthenticatorResult(intent.getExtras());
         setResult(RESULT_OK, intent);
-        if (!intent.getStringExtra(AccountManager.KEY_AUTHTOKEN).toString().isEmpty())
+        if (intent.getStringExtra(AccountManager.KEY_AUTHTOKEN).toString()!=null)
         {
-            Toast.makeText(getApplicationContext(), intent.getStringExtra(AccountManager.KEY_AUTHTOKEN).toString(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Invalid username and password combination", Toast.LENGTH_SHORT).show();
         }
         finish();
     }

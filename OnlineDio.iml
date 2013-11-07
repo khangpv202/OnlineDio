@@ -29,6 +29,8 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="android-query-full.0.26.2-beta" level="project" />
+    <orderEntry type="module" module-name="pulltorefresh" />
   </component>
 </module>
 

@@ -1,3 +1,4 @@
+/*
 package com.example.OnlineDio.activity;
 
 import android.accounts.Account;
@@ -23,13 +24,15 @@ import com.example.OnlineDio.util.StreamUtils;
 import java.util.ArrayList;
 import java.util.List;
 
+*/
 /**
  * Created with IntelliJ IDEA.
  * User: khangpv
  * Date: 11/1/13
  * Time: 8:32 AM
  * To change this template use File | Settings | File Templates.
- */
+ *//*
+
 public class TestContentProvider extends Activity
 {
 
@@ -239,8 +242,10 @@ public class TestContentProvider extends Activity
             @Override
             public void onClick(View v)
             {
-                /*Account[] accounts = mAccountManager.getAccountsByType(OnlineDioContract.ACCOUNT_TYPE);
-                String au = mAccountManager.peekAuthToken(accounts[0], AccountGeneral.AUTHTOKEN_TYPE_FULL_ACCESS);*/
+                */
+/*Account[] accounts = mAccountManager.getAccountsByType(OnlineDioContract.ACCOUNT_TYPE);
+                String au = mAccountManager.peekAuthToken(accounts[0], AccountGeneral.AUTHTOKEN_TYPE_FULL_ACCESS);*//*
+
                 String userID = "586";
                 refreshAuthenTokenAndLoadProfile();
 //                au = mAccountManager.peekAuthToken(accounts[0], AccountGeneral.AUTHTOKEN_TYPE_FULL_ACCESS);
@@ -388,3 +393,4 @@ public class TestContentProvider extends Activity
         return shows;
     }
 }
+*/

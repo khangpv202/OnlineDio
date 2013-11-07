@@ -1,3 +1,4 @@
+/*
 package com.example.OnlineDio.activity;
 
 import android.accounts.AccountManager;
@@ -16,9 +17,11 @@ import java.util.ArrayList;
 
 public class HomeActivity extends Activity
 {
-    /**
+    */
+/**
      * Called when the activity is first created.
-     */
+     *//*
+
     ListView lisView;
     private ImageButton home_ibOption;
     SimpleCursorAdapter mAdapter;
@@ -125,3 +128,4 @@ public class HomeActivity extends Activity
         return listResult;
     }
 }
+*/
